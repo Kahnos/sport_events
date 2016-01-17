@@ -1,0 +1,70 @@
+<?php
+namespace App\Model\Table;
+
+use App\Model\Entity\Athlete;
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+/**
+ * Athletes Model
+ *
+ * @property \Cake\ORM\Association\HasMany $IndividualParticipations
+ * @property \Cake\ORM\Association\BelongsToMany $Teams
+ */
+class AthletesTable extends Table
+{
+
+    /**
+     * Initialize method
+     *
+     * @param array $config The configuration for the Table.
+     * @return void
+     */
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this->table('athletes');
+        $this->displayField('name');
+        $this->primaryKey('id');
+
+        $this->hasMany('IndividualParticipations', [
+            'foreignKey' => 'athlete_id'
+        ]);
+        $this->belongsToMany('Teams', [
+            'foreignKey' => 'athlete_id',
+            'targetForeignKey' => 'team_id',
+            'joinTable' => 'athletes_teams'
+        ]);
+    }
+
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->add('id', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
+
+        $validator
+            ->requirePresence('sex', 'create')
+            ->notEmpty('sex');
+
+        $validator
+            ->add('date_of_birth', 'valid', ['rule' => 'date'])
+            ->requirePresence('date_of_birth', 'create')
+            ->notEmpty('date_of_birth');
+
+        return $validator;
+    }
+}
