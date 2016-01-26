@@ -95,6 +95,7 @@ $this->start('tb_actions');
                 <th><?= __('Name') ?></th>
                 <th><?= __('Sex') ?></th>
                 <th><?= __('Date Of Birth') ?></th>
+                <th><?= __('CI') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             </thead>
@@ -105,6 +106,7 @@ $this->start('tb_actions');
                     <td><?= h($athletes->name) ?></td>
                     <td><?= h($athletes->sex) ?></td>
                     <td><?= h($athletes->date_of_birth) ?></td>
+                    <td><?= h($athletes->CI) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'Athletes', 'action' => 'view', $athletes->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                         <?= $this->Html->link('', ['controller' => 'Athletes', 'action' => 'edit', $athletes->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>

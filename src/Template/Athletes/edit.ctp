@@ -24,6 +24,7 @@ $this->start('tb_actions');
     echo $this->Form->input('name');
     echo $this->Form->input('sex');
     echo $this->Form->input('date_of_birth');
+    echo $this->Form->input('CI');
     echo $this->Form->input('teams._ids', ['options' => $teams]);
     ?>
 </fieldset>

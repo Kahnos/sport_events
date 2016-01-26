@@ -20,8 +20,17 @@ class DisciplinesTableTest extends TestCase
         'app.disciplines',
         'app.modes',
         'app.individual_participations',
+        'app.athletes',
+        'app.teams',
+        'app.clubs',
+        'app.categories',
+        'app.ages',
+        'app.distances',
         'app.team_participations',
+        'app.events',
         'app.winners',
+        'app.times',
+        'app.athletes_teams',
         'app.disciplines_modes'
     ];
 

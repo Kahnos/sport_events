@@ -19,10 +19,18 @@ class TeamsControllerTest extends IntegrationTestCase
         'app.teams',
         'app.clubs',
         'app.categories',
-        'app.team_participations',
-        'app.athletes',
+        'app.ages',
+        'app.distances',
         'app.individual_participations',
-        'app.athletes_teams'
+        'app.athletes',
+        'app.athletes_teams',
+        'app.modes',
+        'app.team_participations',
+        'app.events',
+        'app.winners',
+        'app.times',
+        'app.disciplines',
+        'app.disciplines_modes'
     ];
 
     /**
