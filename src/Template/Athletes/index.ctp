@@ -26,7 +26,7 @@ $this->start('tb_actions');
             <td><?= $this->Number->format($athlete->CI) ?></td>
             <td><?= h($athlete->name) ?></td>
             <td><?= h($athlete->sex) ?></td>
-            <td><?= h($athlete->date_of_birth) ?></td>
+            <td><?= h($athlete->date_of_birth->format('d-m-Y')) ?></td>
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $athlete->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                 <?= $this->Html->link('', ['action' => 'edit', $athlete->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>

@@ -36,10 +36,23 @@ class AthletesController extends AppController
             'contain' => ['Teams', 'IndividualParticipations']
         ]);
 
+        $modes = $this->loadModel('Modes');
+        $categories = $this->loadModel('Categories');
+        $events = $this->loadModel('Events');
+        $clubs = $this->loadModel('Clubs');
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+
+        $this->set('modes', $modes);
+        $this->set('categories', $categories);
+        $this->set('events', $events);
+        $this->set('clubs', $clubs);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
         $this->set('athlete', $athlete);
         $this->set('_serialize', ['athlete']);
     }
-
+    //$data = ClassRegistry::init('IngredientAlias')->find('first', array());
     /**
      * Add method
      *

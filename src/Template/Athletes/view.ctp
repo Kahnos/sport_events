@@ -39,7 +39,7 @@ $this->start('tb_actions');
         </tr>
         <tr>
             <td><?= __('Date Of Birth') ?></td>
-            <td><?= h($athlete->date_of_birth) ?></td>
+            <td><?= h($athlete->date_of_birth->format('d-m-Y')) ?></td>
         </tr>
     </table>
 </div>
@@ -54,21 +54,37 @@ $this->start('tb_actions');
             <thead>
             <tr>
                 <th><?= __('Position') ?></th>
-                <th><?= __('Athlete Id') ?></th>
                 <th><?= __('Mode Id') ?></th>
                 <th><?= __('Category Id') ?></th>
                 <th><?= __('Event Id') ?></th>
+                <th><?= __('Fecha') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($athlete->individual_participations as $individualParticipations): ?>
                 <tr>
+                    <?php
+                        $IP_mode = $modes->get($individualParticipations->mode_id);
+                        $IP_event = $events->get($individualParticipations->event_id);
+                    ?>
+
                     <td><?= h($individualParticipations->position) ?></td>
-                    <td><?= h($individualParticipations->athlete_id) ?></td>
-                    <td><?= h($individualParticipations->mode_id) ?></td>
-                    <td><?= h($individualParticipations->category_id) ?></td>
-                    <td><?= h($individualParticipations->event_id) ?></td>
+                    <td><?= h($IP_mode->type) ?></td>
+                    <?php
+                        $IP_category = $categories->get($individualParticipations->category_id);
+                        $IP_category_distance = $distances->get($IP_category->distance_id);
+
+                        if($IP_category->age_id != NULL){
+                            $IP_category_age = $ages->get($IP_category->age_id);
+                            echo "<td>" . h($IP_category_distance->name) . " - " . h($IP_category_age->name) . "</td>";
+                        }
+                        else{
+                            echo "<td>" . h($IP_category_distance->name) . " - " . h($IP_category->sex) . "</td>";
+                        }
+                    ?>
+                    <td><?= h($IP_event->name) ?></td>
+                    <td><?= h($IP_event->date->format('d-m-Y')) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'IndividualParticipations', 'action' => 'view', $individualParticipations->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                     </td>
@@ -89,7 +105,6 @@ $this->start('tb_actions');
         <table class="table table-striped">
             <thead>
             <tr>
-                <th><?= __('Id') ?></th>
                 <th><?= __('Name') ?></th>
                 <th><?= __('Club Id') ?></th>
                 <th><?= __('Category Id') ?></th>
@@ -99,10 +114,22 @@ $this->start('tb_actions');
             <tbody>
             <?php foreach ($athlete->teams as $teams): ?>
                 <tr>
-                    <td><?= h($teams->id) ?></td>
                     <td><?= h($teams->name) ?></td>
-                    <td><?= h($teams->club_id) ?></td>
-                    <td><?= h($teams->category_id) ?></td>
+                    <?php
+                        $T_club = $clubs->get($teams->club_id);
+                        $T_category = $categories->get($teams->category_id);
+                        $T_category_distance = $distances->get($T_category->distance_id);
+
+                        echo "<td>" . h($T_club->name) . "</td>";
+
+                        if($IP_category->age_id != NULL){
+                            $IP_category_age = $ages->get($IP_category->age_id);
+                            echo "<td>" . h($T_category_distance->name) . " - " . h($T_category_age->name) . "</td>";
+                        }
+                        else{
+                            echo "<td>" . h($T_category_distance->name) . " - " . h($T_category->sex) . "</td>";
+                        }
+                    ?>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'Teams', 'action' => 'view', $teams->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                     </td>
