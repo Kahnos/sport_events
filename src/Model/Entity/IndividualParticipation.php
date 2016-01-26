@@ -4,17 +4,21 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Athlete Entity.
+ * IndividualParticipation Entity.
  *
+ * @property int $position
  * @property int $id
- * @property string $name
- * @property string $sex
- * @property \Cake\I18n\Time $date_of_birth
- * @property int $CI
- * @property \App\Model\Entity\IndividualParticipation[] $individual_participations
- * @property \App\Model\Entity\Team[] $teams
+ * @property int $athlete_id
+ * @property \App\Model\Entity\Athlete $athlete
+ * @property int $mode_id
+ * @property \App\Model\Entity\Mode $mode
+ * @property int $category_id
+ * @property \App\Model\Entity\Category $category
+ * @property int $event_id
+ * @property \App\Model\Entity\Event $event
+ * @property \App\Model\Entity\Time[] $times
  */
-class Athlete extends Entity
+class IndividualParticipation extends Entity
 {
 
     /**

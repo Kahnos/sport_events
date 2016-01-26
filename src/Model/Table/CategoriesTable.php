@@ -68,7 +68,8 @@ class CategoriesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('sex');
+            ->requirePresence('sex', 'create')
+            ->notEmpty('sex');
 
         return $validator;
     }

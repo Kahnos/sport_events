@@ -24,16 +24,20 @@ $this->start('tb_actions');
             <td><?= h($athlete->name) ?></td>
         </tr>
         <tr>
+            <td><?= __('Sex') ?></td>
+            <td><?= h($athlete->sex) ?></td>
+        </tr>
+        <tr>
             <td><?= __('Id') ?></td>
             <td><?= $this->Number->format($athlete->id) ?></td>
         </tr>
         <tr>
-            <td><?= __('Date Of Birth') ?></td>
-            <td><?= h($athlete->date_of_birth) ?></td>
+            <td><?= __('CI') ?></td>
+            <td><?= $this->Number->format($athlete->CI) ?></td>
         </tr>
         <tr>
-            <td><?= __('Sex') ?></td>
-            <td><?= $this->Text->autoParagraph(h($athlete->sex)); ?></td>
+            <td><?= __('Date Of Birth') ?></td>
+            <td><?= h($athlete->date_of_birth) ?></td>
         </tr>
     </table>
 </div>

@@ -1,14 +1,14 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\DisciplinesTable;
+use App\Model\Table\TeamParticipationsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\DisciplinesTable Test Case
+ * App\Model\Table\TeamParticipationsTable Test Case
  */
-class DisciplinesTableTest extends TestCase
+class TeamParticipationsTableTest extends TestCase
 {
 
     /**
@@ -17,21 +17,21 @@ class DisciplinesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.disciplines',
-        'app.modes',
-        'app.individual_participations',
-        'app.athletes',
+        'app.team_participations',
         'app.teams',
         'app.clubs',
         'app.categories',
         'app.ages',
         'app.distances',
-        'app.team_participations',
-        'app.events',
-        'app.winners',
-        'app.times',
+        'app.individual_participations',
+        'app.athletes',
         'app.athletes_teams',
-        'app.disciplines_modes'
+        'app.modes',
+        'app.winners',
+        'app.disciplines',
+        'app.disciplines_modes',
+        'app.events',
+        'app.times'
     ];
 
     /**
@@ -42,8 +42,8 @@ class DisciplinesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Disciplines') ? [] : ['className' => 'App\Model\Table\DisciplinesTable'];
-        $this->Disciplines = TableRegistry::get('Disciplines', $config);
+        $config = TableRegistry::exists('TeamParticipations') ? [] : ['className' => 'App\Model\Table\TeamParticipationsTable'];
+        $this->TeamParticipations = TableRegistry::get('TeamParticipations', $config);
     }
 
     /**
@@ -53,7 +53,7 @@ class DisciplinesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Disciplines);
+        unset($this->TeamParticipations);
 
         parent::tearDown();
     }
@@ -74,6 +74,16 @@ class DisciplinesTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

@@ -28,6 +28,10 @@ $this->start('tb_actions');
     </div>
     <table class="table table-striped" cellpadding="0" cellspacing="0">
         <tr>
+            <td><?= __('Sex') ?></td>
+            <td><?= h($category->sex) ?></td>
+        </tr>
+        <tr>
             <td><?= __('Age') ?></td>
             <td><?= $category->has('age') ? $this->Html->link($category->age->name, ['controller' => 'Ages', 'action' => 'view', $category->age->id]) : '' ?></td>
         </tr>
@@ -38,10 +42,6 @@ $this->start('tb_actions');
         <tr>
             <td><?= __('Id') ?></td>
             <td><?= $this->Number->format($category->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Sex') ?></td>
-            <td><?= $this->Text->autoParagraph(h($category->sex)); ?></td>
         </tr>
     </table>
 </div>

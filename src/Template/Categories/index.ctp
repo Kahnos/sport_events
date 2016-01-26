@@ -22,6 +22,7 @@ $this->start('tb_actions');
     <thead>
         <tr>
             <th><?= $this->Paginator->sort('id'); ?></th>
+            <th><?= $this->Paginator->sort('sex'); ?></th>
             <th><?= $this->Paginator->sort('age_id'); ?></th>
             <th><?= $this->Paginator->sort('distance_id'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
@@ -31,6 +32,7 @@ $this->start('tb_actions');
         <?php foreach ($categories as $category): ?>
         <tr>
             <td><?= $this->Number->format($category->id) ?></td>
+            <td><?= h($category->sex) ?></td>
             <td>
                 <?= $category->has('age') ? $this->Html->link($category->age->name, ['controller' => 'Ages', 'action' => 'view', $category->age->id]) : '' ?>
             </td>
