@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2016-01-26 09:06-0430\n"
-"PO-Revision-Date: 2016-01-26 09:22-0430\n"
+"PO-Revision-Date: 2016-01-26 17:58-0430\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,117 +117,117 @@ msgstr "La distancia se ha guardado."
 
 #: Controller/DistancesController.php:55;80
 msgid "The distance could not be saved. Please, try again."
-msgstr ""
+msgstr "La distancia no pudo ser registrada. Por favor, intente de nuevo."
 
 #: Controller/DistancesController.php:99
 msgid "The distance has been deleted."
-msgstr ""
+msgstr "La distancia se ha eliminado."
 
 #: Controller/DistancesController.php:101
 msgid "The distance could not be deleted. Please, try again."
-msgstr ""
+msgstr "La distancia no pudo ser eliminada. Por favor, intente de nuevo."
 
 #: Controller/EventsController.php:52;77
 msgid "The event has been saved."
-msgstr ""
+msgstr "El evento se ha guardado."
 
 #: Controller/EventsController.php:55;80
 msgid "The event could not be saved. Please, try again."
-msgstr ""
+msgstr "El evento no pudo ser registrado. Por favor, intente de nuevo."
 
 #: Controller/EventsController.php:99
 msgid "The event has been deleted."
-msgstr ""
+msgstr "El evento ha sido eliminado."
 
 #: Controller/EventsController.php:101
 msgid "The event could not be deleted. Please, try again."
-msgstr ""
+msgstr "El evento no pudo ser eliminado. Por favor, intente de nuevo."
 
 #: Controller/IndividualParticipationsController.php:55;84
 msgid "The individual participation has been saved."
-msgstr ""
+msgstr "La participación individual se ha guardado."
 
 #: Controller/IndividualParticipationsController.php:58;87
 msgid "The individual participation could not be saved. Please, try again."
-msgstr ""
+msgstr "La participación individual no pudo ser guardada. Por favor, intente de nuevo."
 
 #: Controller/IndividualParticipationsController.php:110
 msgid "The individual participation has been deleted."
-msgstr ""
+msgstr "Se ha eliminado la participación individual."
 
 #: Controller/IndividualParticipationsController.php:112
 msgid "The individual participation could not be deleted. Please, try again."
-msgstr ""
+msgstr "La participación individual no pudo ser guardada. Por favor, intente de nuevo."
 
 #: Controller/ModesController.php:52;78
 msgid "The mode has been saved."
-msgstr ""
+msgstr "La modalidad se ha guardado."
 
 #: Controller/ModesController.php:55;81
 msgid "The mode could not be saved. Please, try again."
-msgstr ""
+msgstr "La modalidad no pudo ser registrada. Por favor, intente de nuevo."
 
 #: Controller/ModesController.php:101
 msgid "The mode has been deleted."
-msgstr ""
+msgstr "La modalidad ha sido eliminada."
 
 #: Controller/ModesController.php:103
 msgid "The mode could not be deleted. Please, try again."
-msgstr ""
+msgstr "La modalidad no pudo ser eliminada. Por favor, intente de nuevo."
 
 #: Controller/TeamParticipationsController.php:55;84
 msgid "The team participation has been saved."
-msgstr ""
+msgstr "La participación en equipo se ha guardo."
 
 #: Controller/TeamParticipationsController.php:58;87
 msgid "The team participation could not be saved. Please, try again."
-msgstr ""
+msgstr "La participación en equipo no pudo ser registrada. Por favor, intente de nuevo."
 
 #: Controller/TeamParticipationsController.php:110
 msgid "The team participation has been deleted."
-msgstr ""
+msgstr "La participación en equipo ha sido eliminada."
 
 #: Controller/TeamParticipationsController.php:112
 msgid "The team participation could not be deleted. Please, try again."
-msgstr ""
+msgstr "La participación en equipo no pudo ser eliminada. Por favor, intente de nuevo."
 
 #: Controller/TeamsController.php:55;83
 msgid "The team has been saved."
-msgstr ""
+msgstr "El equipo se ha guardado."
 
 #: Controller/TeamsController.php:58;86
 msgid "The team could not be saved. Please, try again."
-msgstr ""
+msgstr "El equipo no pudo ser registrado. Por favor, intente de nuevo."
 
 #: Controller/TeamsController.php:108
 msgid "The team has been deleted."
-msgstr ""
+msgstr "El equipo ha sido eliminado."
 
 #: Controller/TeamsController.php:110
 msgid "The team could not be deleted. Please, try again."
-msgstr ""
+msgstr "El equipo no pudo ser eliminado. Por favor, intente de nuevo."
 
 #: Controller/TimesController.php:55;82
 msgid "The time has been saved."
-msgstr ""
+msgstr "El tiempo se ha guardado."
 
 #: Controller/TimesController.php:58;85
 msgid "The time could not be saved. Please, try again."
-msgstr ""
+msgstr "El tiempo no pudo ser registrado. Por favor, intente de nuevo."
 
 #: Controller/TimesController.php:106
 msgid "The time has been deleted."
-msgstr ""
+msgstr "El tiempo ha sido eliminado."
 
 #: Controller/TimesController.php:108
 msgid "The time could not be deleted. Please, try again."
-msgstr ""
+msgstr "El tiempo no pudo ser eliminado. Por favor, intente de nuevo."
 
 #: Template/Ages/add.ctp:5 Template/Ages/edit.ctp:13 Template/Ages/view.ctp:7
 #: Template/Categories/add.ctp:6 Template/Categories/edit.ctp:14
 #: Template/Categories/index.ctp:6 Template/Categories/view.ctp:9
 msgid "List Ages"
-msgstr ""
+msgstr "Lista de Edades"
 
 #: Template/Ages/add.ctp:6 Template/Ages/edit.ctp:14 Template/Ages/index.ctp:6
 #: Template/Ages/view.ctp:9 Template/Categories/add.ctp:5
@@ -248,7 +248,7 @@ msgstr ""
 #: Template/Teams/edit.ctp:16 Template/Teams/index.ctp:8
 #: Template/Teams/view.ctp:11
 msgid "List Categories"
-msgstr ""
+msgstr "Lista de Categorías"
 
 #: Template/Ages/add.ctp:7 Template/Ages/edit.ctp:15 Template/Ages/index.ctp:7
 #: Template/Ages/view.ctp:10 Template/Categories/index.ctp:5
@@ -268,7 +268,7 @@ msgstr ""
 #: Template/Teams/edit.ctp:17 Template/Teams/index.ctp:9
 #: Template/Teams/view.ctp:12
 msgid "New Category"
-msgstr ""
+msgstr "Nueva categoría"
 
 #: Template/Ages/add.ctp:12 Template/Athletes/add.ctp:14
 #: Template/Categories/add.ctp:22 Template/CategoriesEventsModes/add.ctp:16
@@ -278,7 +278,7 @@ msgstr ""
 #: Template/TeamParticipations/add.ctp:20 Template/Teams/add.ctp:18
 #: Template/Times/add.ctp:14
 msgid "Add {0}"
-msgstr ""
+msgstr "Añadir  {0}"
 
 #: Template/Ages/add.ctp:19 Template/Athletes/add.ctp:22
 #: Template/Categories/add.ctp:29 Template/CategoriesEventsModes/add.ctp:21
@@ -288,7 +288,7 @@ msgstr ""
 #: Template/TeamParticipations/add.ctp:29 Template/Teams/add.ctp:26
 #: Template/Times/add.ctp:25
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 #: Template/Ages/edit.ctp:7 Template/Ages/index.ctp:31
 #: Template/Ages/view.ctp:65 Template/Athletes/edit.ctp:7
@@ -313,7 +313,7 @@ msgstr ""
 #: Template/Teams/index.ctp:41 Template/Teams/view.ctp:75;111
 #: Template/Times/edit.ctp:7 Template/Times/index.ctp:43
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: Template/Ages/edit.ctp:9 Template/Ages/index.ctp:31
 #: Template/Ages/view.ctp:6;65 Template/Athletes/edit.ctp:9
@@ -340,7 +340,7 @@ msgstr ""
 #: Template/Times/edit.ctp:9 Template/Times/index.ctp:43
 #: Template/Times/view.ctp:6
 msgid "Are you sure you want to delete # {0}?"
-msgstr ""
+msgstr "Está seguro que desea eliminar # {0}?"
 
 #: Template/Ages/edit.ctp:20 Template/Athletes/edit.ctp:22
 #: Template/Categories/edit.ctp:30 Template/CategoriesEventsModes/edit.ctp:24
@@ -350,7 +350,7 @@ msgstr ""
 #: Template/TeamParticipations/edit.ctp:28 Template/Teams/edit.ctp:26
 #: Template/Times/edit.ctp:22
 msgid "Edit {0}"
-msgstr ""
+msgstr "Editar {0}"
 
 #: Template/Ages/edit.ctp:27 Template/Athletes/edit.ctp:30
 #: Template/Categories/edit.ctp:37 Template/CategoriesEventsModes/edit.ctp:29
@@ -360,13 +360,13 @@ msgstr ""
 #: Template/TeamParticipations/edit.ctp:37 Template/Teams/edit.ctp:34
 #: Template/Times/edit.ctp:33
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: Template/Ages/index.ctp:5 Template/Ages/view.ctp:8
 #: Template/Categories/add.ctp:7 Template/Categories/edit.ctp:15
 #: Template/Categories/index.ctp:7 Template/Categories/view.ctp:10
 msgid "New Age"
-msgstr ""
+msgstr "Nueva Edad"
 
 #: Template/Ages/index.ctp:18 Template/Ages/view.ctp:52
 #: Template/Athletes/index.ctp:19 Template/Athletes/view.ctp:56;94
@@ -383,7 +383,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:72 Template/Teams/index.ctp:24
 #: Template/Teams/view.ctp:60;98 Template/Times/index.ctp:23
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: Template/Ages/index.ctp:29 Template/Ages/view.ctp:63
 #: Template/Athletes/index.ctp:29 Template/Athletes/view.ctp:69;105
@@ -400,7 +400,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:87 Template/Teams/index.ctp:39
 #: Template/Teams/view.ctp:73;109 Template/Times/index.ctp:41
 msgid "View"
-msgstr ""
+msgstr "Vista"
 
 #: Template/Ages/index.ctp:30 Template/Ages/view.ctp:64
 #: Template/Athletes/index.ctp:30 Template/Athletes/view.ctp:70;106
@@ -417,7 +417,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:88 Template/Teams/index.ctp:40
 #: Template/Teams/view.ctp:74;110 Template/Times/index.ctp:42
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: Template/Ages/index.ctp:39 Template/Athletes/index.ctp:39
 #: Template/Categories/index.ctp:51 Template/CategoriesEventsModes/index.ctp:49
@@ -427,7 +427,7 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:59 Template/Teams/index.ctp:49
 #: Template/Times/index.ctp:51
 msgid "previous"
-msgstr ""
+msgstr "anterior"
 
 #: Template/Ages/index.ctp:41 Template/Athletes/index.ctp:41
 #: Template/Categories/index.ctp:53 Template/CategoriesEventsModes/index.ctp:51
@@ -437,22 +437,22 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:61 Template/Teams/index.ctp:51
 #: Template/Times/index.ctp:53
 msgid "next"
-msgstr ""
+msgstr "siguiente"
 
 #: Template/Ages/view.ctp:5
 msgid "Edit Age"
-msgstr ""
+msgstr "Editar edad"
 
 #: Template/Ages/view.ctp:6
 msgid "Delete Age"
-msgstr ""
+msgstr "Eliminar Edad"
 
 #: Template/Ages/view.ctp:21 Template/Athletes/view.ctp:23;91
 #: Template/Categories/view.ctp:139 Template/Clubs/view.ctp:21;41
 #: Template/Distances/view.ctp:21 Template/Events/view.ctp:25
 #: Template/Teams/view.ctp:27;95
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: Template/Ages/view.ctp:25;48 Template/Athletes/view.ctp:27;51;90
 #: Template/Categories/view.ctp:39;59;99;138 Template/Clubs/view.ctp:25;40
@@ -467,29 +467,29 @@ msgstr ""
 
 #: Template/Ages/view.ctp:29
 msgid "Min Age"
-msgstr ""
+msgstr "Edad Min."
 
 #: Template/Ages/view.ctp:33
 msgid "Max Age"
-msgstr ""
+msgstr "Edad Max."
 
 #: Template/Ages/view.ctp:42 Template/Distances/view.ctp:50
 msgid "Related Categories"
-msgstr ""
+msgstr "Caegorías Relacionadas"
 
 #: Template/Ages/view.ctp:49 Template/Athletes/view.ctp:35
 #: Template/Categories/view.ctp:43 Template/Distances/view.ctp:57
 #: Template/Teams/view.ctp:96
 msgid "Sex"
-msgstr ""
+msgstr "Sexo"
 
 #: Template/Ages/view.ctp:50 Template/Distances/view.ctp:58
 msgid "Age Id"
-msgstr ""
+msgstr "Edad"
 
 #: Template/Ages/view.ctp:51 Template/Distances/view.ctp:59
 msgid "Distance Id"
-msgstr ""
+msgstr "Distancia"
 
 #: Template/Athletes/add.ctp:5 Template/Athletes/edit.ctp:13
 #: Template/Athletes/view.ctp:7 Template/IndividualParticipations/add.ctp:6
@@ -499,7 +499,7 @@ msgstr ""
 #: Template/Teams/edit.ctp:20 Template/Teams/index.ctp:12
 #: Template/Teams/view.ctp:15
 msgid "List Athletes"
-msgstr ""
+msgstr "Lista de Atletas"
 
 #: Template/Athletes/add.ctp:6 Template/Athletes/edit.ctp:14
 #: Template/Athletes/view.ctp:9 Template/Categories/add.ctp:10
@@ -512,7 +512,7 @@ msgstr ""
 #: Template/Times/add.ctp:6 Template/Times/edit.ctp:14
 #: Template/Times/view.ctp:9
 msgid "List Individual Participations"
-msgstr ""
+msgstr "Lista de Participaciones Individuales"
 
 #: Template/Athletes/add.ctp:7 Template/Athletes/edit.ctp:15
 #: Template/Athletes/index.ctp:7 Template/Athletes/view.ctp:10
@@ -527,7 +527,7 @@ msgstr ""
 #: Template/Times/edit.ctp:15 Template/Times/index.ctp:7
 #: Template/Times/view.ctp:10
 msgid "New Individual Participation"
-msgstr ""
+msgstr "Nueva Participación Individual"
 
 #: Template/Athletes/add.ctp:8 Template/Athletes/edit.ctp:16
 #: Template/Athletes/index.ctp:8 Template/Athletes/view.ctp:11
@@ -541,7 +541,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:9 Template/Teams/add.ctp:5
 #: Template/Teams/edit.ctp:13 Template/Teams/view.ctp:7
 msgid "List Teams"
-msgstr ""
+msgstr "Lista de Equipos"
 
 #: Template/Athletes/add.ctp:9 Template/Athletes/edit.ctp:17
 #: Template/Athletes/index.ctp:9 Template/Athletes/view.ctp:12
@@ -555,7 +555,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:10 Template/Teams/index.ctp:5
 #: Template/Teams/view.ctp:8
 msgid "New Team"
-msgstr ""
+msgstr "Nuevo Equipo"
 
 #: Template/Athletes/index.ctp:5 Template/Athletes/view.ctp:8
 #: Template/IndividualParticipations/add.ctp:7
@@ -565,83 +565,83 @@ msgstr ""
 #: Template/Teams/edit.ctp:21 Template/Teams/index.ctp:13
 #: Template/Teams/view.ctp:16
 msgid "New Athlete"
-msgstr ""
+msgstr "Nuevo Atleta"
 
 #: Template/Athletes/index.ctp:6 Template/Categories/index.ctp:10
 #: Template/Events/index.ctp:6 Template/Modes/index.ctp:6
 #: Template/Times/index.ctp:6
 msgid "List IndividualParticipations"
-msgstr ""
+msgstr "Lista de Participaciones Individuales"
 
 #: Template/Athletes/view.ctp:5
 msgid "Edit Athlete"
-msgstr ""
+msgstr "Editar Atleta"
 
 #: Template/Athletes/view.ctp:6
 msgid "Delete Athlete"
-msgstr ""
+msgstr "Eliminar Atleta"
 
 #: Template/Athletes/view.ctp:31 Template/Teams/view.ctp:97
 msgid "Date Of Birth"
-msgstr ""
+msgstr "Fecha de Naciminento"
 
 #: Template/Athletes/view.ctp:44 Template/Categories/view.ctp:52
 #: Template/Events/view.ctp:42 Template/Modes/view.ctp:44
 msgid "Related IndividualParticipations"
-msgstr ""
+msgstr "Participaciones Individuales Relacionadas"
 
 #: Template/Athletes/view.ctp:50 Template/Categories/view.ctp:58;98
 #: Template/Events/view.ctp:48;88 Template/IndividualParticipations/view.ctp:45
 #: Template/Modes/view.ctp:50;90 Template/TeamParticipations/view.ctp:45
 #: Template/Teams/view.ctp:54
 msgid "Position"
-msgstr ""
+msgstr "Posición"
 
 #: Template/Athletes/view.ctp:52 Template/Categories/view.ctp:60
 #: Template/Events/view.ctp:50 Template/Modes/view.ctp:52
 msgid "Athlete Id"
-msgstr ""
+msgstr "Atleta"
 
 #: Template/Athletes/view.ctp:53 Template/Categories/view.ctp:61;101;177
 #: Template/Events/view.ctp:51;91;131 Template/Modes/view.ctp:53;93;133
 #: Template/Teams/view.ctp:57
 msgid "Mode Id"
-msgstr ""
+msgstr "Modalidad"
 
 #: Template/Athletes/view.ctp:54;93 Template/Categories/view.ctp:62;102;141;178
 #: Template/Clubs/view.ctp:43 Template/Events/view.ctp:52;92;132
 #: Template/Modes/view.ctp:54;94;134 Template/Teams/view.ctp:58
 msgid "Category Id"
-msgstr ""
+msgstr "Categoría"
 
 #: Template/Athletes/view.ctp:55 Template/Categories/view.ctp:63;103;179
 #: Template/Events/view.ctp:53;93;133 Template/Modes/view.ctp:55;95;135
 #: Template/Teams/view.ctp:59
 msgid "Event Id"
-msgstr ""
+msgstr "Evento"
 
 #: Template/Athletes/view.ctp:84 Template/Categories/view.ctp:132
 #: Template/Clubs/view.ctp:34
 msgid "Related Teams"
-msgstr ""
+msgstr "Equipos Relacionados"
 
 #: Template/Athletes/view.ctp:92 Template/Categories/view.ctp:140
 #: Template/Clubs/view.ctp:42
 msgid "Club Id"
-msgstr ""
+msgstr "Club"
 
 #: Template/Categories/add.ctp:8 Template/Categories/edit.ctp:16
 #: Template/Categories/index.ctp:8 Template/Categories/view.ctp:11
 #: Template/Distances/add.ctp:5 Template/Distances/edit.ctp:13
 #: Template/Distances/view.ctp:7
 msgid "List Distances"
-msgstr ""
+msgstr "Lista de Distancias"
 
 #: Template/Categories/add.ctp:9 Template/Categories/edit.ctp:17
 #: Template/Categories/index.ctp:9 Template/Categories/view.ctp:12
 #: Template/Distances/index.ctp:5 Template/Distances/view.ctp:8
 msgid "New Distance"
-msgstr ""
+msgstr "Nueva Distancia"
 
 #: Template/Categories/add.ctp:12 Template/Categories/edit.ctp:20
 #: Template/Categories/view.ctp:15 Template/Events/add.ctp:8
@@ -654,7 +654,7 @@ msgstr ""
 #: Template/Times/add.ctp:8 Template/Times/edit.ctp:16
 #: Template/Times/view.ctp:11
 msgid "List Team Participations"
-msgstr ""
+msgstr "Lista de Participaciones en Equipo"
 
 #: Template/Categories/add.ctp:13 Template/Categories/edit.ctp:21
 #: Template/Categories/index.ctp:13 Template/Categories/view.ctp:16
@@ -669,7 +669,7 @@ msgstr ""
 #: Template/Times/edit.ctp:17 Template/Times/index.ctp:9
 #: Template/Times/view.ctp:12
 msgid "New Team Participation"
-msgstr ""
+msgstr "Nueva Participación en Equipo"
 
 #: Template/Categories/add.ctp:16 Template/Categories/edit.ctp:24
 #: Template/Categories/index.ctp:16 Template/Categories/view.ctp:19
@@ -678,7 +678,7 @@ msgstr ""
 #: Template/Modes/add.ctp:10 Template/Modes/edit.ctp:18
 #: Template/Modes/index.ctp:10 Template/Modes/view.ctp:13
 msgid "List Winners"
-msgstr ""
+msgstr "Lista de Ganadores"
 
 #: Template/Categories/add.ctp:17 Template/Categories/edit.ctp:25
 #: Template/Categories/index.ctp:17 Template/Categories/view.ctp:20
@@ -687,65 +687,65 @@ msgstr ""
 #: Template/Modes/add.ctp:11 Template/Modes/edit.ctp:19
 #: Template/Modes/index.ctp:11 Template/Modes/view.ctp:14
 msgid "New Winner"
-msgstr ""
+msgstr "Nuevo Ganador"
 
 #: Template/Categories/index.ctp:12 Template/Events/index.ctp:8
 #: Template/Modes/index.ctp:8 Template/Teams/index.ctp:10
 #: Template/Times/index.ctp:8
 msgid "List TeamParticipations"
-msgstr ""
+msgstr "Lista de Participaciones en Equipo"
 
 #: Template/Categories/view.ctp:5
 msgid "Edit Category"
-msgstr ""
+msgstr "Editar Categoría"
 
 #: Template/Categories/view.ctp:6
 msgid "Delete Category"
-msgstr ""
+msgstr "Eliminar Categoría"
 
 #: Template/Categories/view.ctp:31
 msgid "Age"
-msgstr ""
+msgstr "Edad"
 
 #: Template/Categories/view.ctp:35
 msgid "Distance"
-msgstr ""
+msgstr "Distancia"
 
 #: Template/Categories/view.ctp:92 Template/Events/view.ctp:82
 #: Template/Modes/view.ctp:84 Template/Teams/view.ctp:48
 msgid "Related TeamParticipations"
-msgstr ""
+msgstr "Participaciones en Equipo Relacionadas"
 
 #: Template/Categories/view.ctp:100 Template/Events/view.ctp:90
 #: Template/Modes/view.ctp:92 Template/Teams/view.ctp:56
 msgid "Team Id"
-msgstr ""
+msgstr "Equipo"
 
 #: Template/Categories/view.ctp:168 Template/Events/view.ctp:122
 #: Template/Modes/view.ctp:124
 msgid "Related Winners"
-msgstr ""
+msgstr "Ganadores Relacionados"
 
 #: Template/Categories/view.ctp:174 Template/Events/view.ctp:128
 #: Template/Modes/view.ctp:130
 msgid "Gold Id"
-msgstr ""
+msgstr "Oro"
 
 #: Template/Categories/view.ctp:175 Template/Events/view.ctp:129
 #: Template/Modes/view.ctp:131
 msgid "Silver Id"
-msgstr ""
+msgstr "Plata"
 
 #: Template/Categories/view.ctp:176 Template/Events/view.ctp:130
 #: Template/Modes/view.ctp:132
 msgid "Bronze Id"
-msgstr ""
+msgstr "Bronce"
 
 #: Template/CategoriesEventsModes/add.ctp:5
 #: Template/CategoriesEventsModes/edit.ctp:13
 #: Template/CategoriesEventsModes/view.ctp:7
 msgid "List Categories Events Modes"
-msgstr ""
+msgstr "Lista de Categorías y Modalidades en Eventos"
 
 #: Template/CategoriesEventsModes/add.ctp:6
 #: Template/CategoriesEventsModes/edit.ctp:14
@@ -762,7 +762,7 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:8
 #: Template/TeamParticipations/view.ctp:11
 msgid "List Modes"
-msgstr ""
+msgstr "Lista de modalidades"
 
 #: Template/CategoriesEventsModes/add.ctp:7
 #: Template/CategoriesEventsModes/edit.ctp:15
@@ -778,7 +778,7 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:9
 #: Template/TeamParticipations/view.ctp:12
 msgid "New Mode"
-msgstr ""
+msgstr "Nueva Modalidad"
 
 #: Template/CategoriesEventsModes/add.ctp:10
 #: Template/CategoriesEventsModes/edit.ctp:18
@@ -794,7 +794,7 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:12
 #: Template/TeamParticipations/view.ctp:15
 msgid "List Events"
-msgstr ""
+msgstr "Lista de Eventos"
 
 #: Template/CategoriesEventsModes/add.ctp:11
 #: Template/CategoriesEventsModes/edit.ctp:19
@@ -809,136 +809,136 @@ msgstr ""
 #: Template/TeamParticipations/index.ctp:13
 #: Template/TeamParticipations/view.ctp:16
 msgid "New Event"
-msgstr ""
+msgstr "Nuevo Evento"
 
 #: Template/CategoriesEventsModes/index.ctp:5
 #: Template/CategoriesEventsModes/view.ctp:8
 msgid "New Categories Events Mode"
-msgstr ""
+msgstr "Nueva Categoría y Modalidad en Evento"
 
 #: Template/CategoriesEventsModes/view.ctp:5
 msgid "Edit Categories Events Mode"
-msgstr ""
+msgstr "Editar Categoría y Modalidad en Evento"
 
 #: Template/CategoriesEventsModes/view.ctp:6
 msgid "Delete Categories Events Mode"
-msgstr ""
+msgstr "Eliminar Categoría y Modalidad en Evento"
 
 #: Template/CategoriesEventsModes/view.ctp:25
 #: Template/IndividualParticipations/view.ctp:33
 #: Template/TeamParticipations/view.ctp:33
 msgid "Mode"
-msgstr ""
+msgstr "Modalidad"
 
 #: Template/CategoriesEventsModes/view.ctp:29
 #: Template/IndividualParticipations/view.ctp:37
 #: Template/TeamParticipations/view.ctp:37 Template/Teams/view.ctp:35
 msgid "Category"
-msgstr ""
+msgstr "Categoría"
 
 #: Template/CategoriesEventsModes/view.ctp:33
 #: Template/IndividualParticipations/view.ctp:41
 #: Template/TeamParticipations/view.ctp:41
 msgid "Event"
-msgstr ""
+msgstr "Evento"
 
 #: Template/CategoriesEventsModes/view.ctp:37
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: Template/Clubs/add.ctp:5 Template/Clubs/edit.ctp:13
 #: Template/Clubs/view.ctp:7 Template/Teams/add.ctp:6
 #: Template/Teams/edit.ctp:14 Template/Teams/index.ctp:6
 #: Template/Teams/view.ctp:9
 msgid "List Clubs"
-msgstr ""
+msgstr "Lista de Clubes"
 
 #: Template/Clubs/index.ctp:5 Template/Clubs/view.ctp:8
 #: Template/Teams/add.ctp:7 Template/Teams/edit.ctp:15
 #: Template/Teams/index.ctp:7 Template/Teams/view.ctp:10
 msgid "New Club"
-msgstr ""
+msgstr "Nuevo Club"
 
 #: Template/Clubs/view.ctp:5
 msgid "Edit Club"
-msgstr ""
+msgstr "Editar Club"
 
 #: Template/Clubs/view.ctp:6
 msgid "Delete Club"
-msgstr ""
+msgstr "Eliminar Club"
 
 #: Template/Disciplines/add.ctp:5 Template/Disciplines/edit.ctp:13
 #: Template/Disciplines/view.ctp:7 Template/Modes/add.ctp:12
 #: Template/Modes/edit.ctp:20 Template/Modes/index.ctp:12
 #: Template/Modes/view.ctp:15
 msgid "List Disciplines"
-msgstr ""
+msgstr "Lista de Disciplinas"
 
 #: Template/Disciplines/index.ctp:5 Template/Disciplines/view.ctp:8
 #: Template/Modes/add.ctp:13 Template/Modes/edit.ctp:21
 #: Template/Modes/index.ctp:13 Template/Modes/view.ctp:16
 msgid "New Discipline"
-msgstr ""
+msgstr "Nueva Disciplina"
 
 #: Template/Disciplines/view.ctp:5
 msgid "Edit Discipline"
-msgstr ""
+msgstr "Editar Disciplina"
 
 #: Template/Disciplines/view.ctp:6
 msgid "Delete Discipline"
-msgstr ""
+msgstr "Eliminar Disciplina"
 
 #: Template/Disciplines/view.ctp:25;45 Template/Modes/view.ctp:27;171
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: Template/Disciplines/view.ctp:29 Template/Modes/view.ctp:172
 msgid "Sub Type"
-msgstr ""
+msgstr "Subtipo"
 
 #: Template/Disciplines/view.ctp:38
 msgid "Related Modes"
-msgstr ""
+msgstr "Modalidades Relacionadas"
 
 #: Template/Disciplines/view.ctp:46 Template/Modes/view.ctp:35
 msgid "Number Of Disciplines"
-msgstr ""
+msgstr "Número de Disciplinas"
 
 #: Template/Distances/view.ctp:5
 msgid "Edit Distance"
-msgstr ""
+msgstr "Editar Distancia"
 
 #: Template/Distances/view.ctp:6
 msgid "Delete Distance"
-msgstr ""
+msgstr "Eliminar Distancia"
 
 #: Template/Distances/view.ctp:29
 msgid "Distance 1"
-msgstr ""
+msgstr "Distancia 1 "
 
 #: Template/Distances/view.ctp:33
 msgid "Distance 2"
-msgstr ""
+msgstr "Distancia 2"
 
 #: Template/Distances/view.ctp:37
 msgid "Distance 3"
-msgstr ""
+msgstr "Distancia 3"
 
 #: Template/Distances/view.ctp:41
 msgid "Distance 4"
-msgstr ""
+msgstr "Distancia 4"
 
 #: Template/Events/view.ctp:5
 msgid "Edit Event"
-msgstr ""
+msgstr "Editar Evento"
 
 #: Template/Events/view.ctp:6
 msgid "Delete Event"
-msgstr ""
+msgstr "Eliminar Evento"
 
 #: Template/Events/view.ctp:33
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: Template/IndividualParticipations/add.ctp:14
 #: Template/IndividualParticipations/edit.ctp:22
@@ -950,7 +950,7 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:17 Template/Times/add.ctp:5
 #: Template/Times/edit.ctp:13 Template/Times/view.ctp:7
 msgid "List Times"
-msgstr ""
+msgstr "Lista de Tiempos"
 
 #: Template/IndividualParticipations/add.ctp:15
 #: Template/IndividualParticipations/edit.ctp:23
@@ -962,112 +962,112 @@ msgstr ""
 #: Template/TeamParticipations/view.ctp:18 Template/Times/index.ctp:5
 #: Template/Times/view.ctp:8
 msgid "New Time"
-msgstr ""
+msgstr "Nuevo Tiempo"
 
 #: Template/IndividualParticipations/view.ctp:5
 msgid "Edit Individual Participation"
-msgstr ""
+msgstr "Editar Participación Individual"
 
 #: Template/IndividualParticipations/view.ctp:6
 msgid "Delete Individual Participation"
-msgstr ""
+msgstr "Eliminar Participación Individual"
 
 #: Template/IndividualParticipations/view.ctp:29
 msgid "Athlete"
-msgstr ""
+msgstr "Atleta"
 
 #: Template/IndividualParticipations/view.ctp:58
 #: Template/TeamParticipations/view.ctp:58
 msgid "Related Times"
-msgstr ""
+msgstr "Tiempos Relacionados"
 
 #: Template/IndividualParticipations/view.ctp:64
 #: Template/TeamParticipations/view.ctp:64 Template/Times/view.ctp:35
 msgid "Time 1"
-msgstr ""
+msgstr "Tiempo 1"
 
 #: Template/IndividualParticipations/view.ctp:65
 #: Template/TeamParticipations/view.ctp:65 Template/Times/view.ctp:39
 msgid "Time 2"
-msgstr ""
+msgstr "Tiempo 2"
 
 #: Template/IndividualParticipations/view.ctp:66
 #: Template/TeamParticipations/view.ctp:66 Template/Times/view.ctp:43
 msgid "Time 3"
-msgstr ""
+msgstr "Tiempo 3"
 
 #: Template/IndividualParticipations/view.ctp:67
 #: Template/TeamParticipations/view.ctp:67 Template/Times/view.ctp:47
 msgid "Time 4"
-msgstr ""
+msgstr "Tiempo 4"
 
 #: Template/IndividualParticipations/view.ctp:69
 #: Template/TeamParticipations/view.ctp:69
 msgid "Individual Participation Id"
-msgstr ""
+msgstr "Participación Individual"
 
 #: Template/IndividualParticipations/view.ctp:70
 #: Template/TeamParticipations/view.ctp:70
 msgid "Team Participation Id"
-msgstr ""
+msgstr "Participación en Equipo"
 
 #: Template/IndividualParticipations/view.ctp:71
 #: Template/TeamParticipations/view.ctp:71 Template/Times/view.ctp:51
 msgid "Time Total"
-msgstr ""
+msgstr "Tiempo Total"
 
 #: Template/Modes/view.ctp:5
 msgid "Edit Mode"
-msgstr ""
+msgstr "Editar Modalidad"
 
 #: Template/Modes/view.ctp:6
 msgid "Delete Mode"
-msgstr ""
+msgstr "Eliminar Modalidad"
 
 #: Template/Modes/view.ctp:164
 msgid "Related Disciplines"
-msgstr ""
+msgstr "Disciplinas Relacionadas"
 
 #: Template/TeamParticipations/view.ctp:5
 msgid "Edit Team Participation"
-msgstr ""
+msgstr "Editar Participaciones en Equipo"
 
 #: Template/TeamParticipations/view.ctp:6
 msgid "Delete Team Participation"
-msgstr ""
+msgstr "Eliminar Participaciones en Equipo"
 
 #: Template/TeamParticipations/view.ctp:29
 msgid "Team"
-msgstr ""
+msgstr "Equipo"
 
 #: Template/Teams/view.ctp:5
 msgid "Edit Team"
-msgstr ""
+msgstr "Editar Equipo"
 
 #: Template/Teams/view.ctp:6
 msgid "Delete Team"
-msgstr ""
+msgstr "Eliminar Equipo"
 
 #: Template/Teams/view.ctp:31
 msgid "Club"
-msgstr ""
+msgstr "Club"
 
 #: Template/Teams/view.ctp:88
 msgid "Related Athletes"
-msgstr ""
+msgstr "Atletas Relacionados"
 
 #: Template/Times/view.ctp:5
 msgid "Edit Time"
-msgstr ""
+msgstr "Editar Tiempo"
 
 #: Template/Times/view.ctp:6
 msgid "Delete Time"
-msgstr ""
+msgstr "Eliminar Tiempo"
 
 #: Template/Times/view.ctp:23
 msgid "Individual Participation"
-msgstr ""
+msgstr "Participación Individual"
 
 #: Template/Times/view.ctp:27
 msgid "Team Participation"
-msgstr ""
+msgstr "Participación en Equipo"
