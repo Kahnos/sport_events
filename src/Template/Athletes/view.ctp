@@ -16,9 +16,19 @@ $this->start('tb_actions');
 <div class="panel panel-default">
     <!-- Panel header -->
     <div class="panel-heading">
-        <h3 class="panel-title"><?= h($athlete->name) ?></h3>
+        <h3
+           class="panel-title"><?= h($athlete->name) ?>
+            <td class="actions">
+                <?= $this->Html->link('', ['action' => 'edit', $athlete->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+                <?= $this->Form->postLink('', ['action' => 'delete', $athlete->id], ['confirm' => __('Are you sure you want to delete # {0}?', $athlete->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
+            </td>
+        </h3>
     </div>
     <table class="table table-striped" cellpadding="0" cellspacing="0">
+        <tr>
+            <td><?= __('CI') ?></td>
+            <td><?= $this->Number->format($athlete->CI) ?></td>
+        </tr>
         <tr>
             <td><?= __('Name') ?></td>
             <td><?= h($athlete->name) ?></td>
@@ -26,14 +36,6 @@ $this->start('tb_actions');
         <tr>
             <td><?= __('Sex') ?></td>
             <td><?= h($athlete->sex) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($athlete->id) ?></td>
-        </tr>
-        <tr>
-            <td><?= __('CI') ?></td>
-            <td><?= $this->Number->format($athlete->CI) ?></td>
         </tr>
         <tr>
             <td><?= __('Date Of Birth') ?></td>
@@ -52,7 +54,6 @@ $this->start('tb_actions');
             <thead>
             <tr>
                 <th><?= __('Position') ?></th>
-                <th><?= __('Id') ?></th>
                 <th><?= __('Athlete Id') ?></th>
                 <th><?= __('Mode Id') ?></th>
                 <th><?= __('Category Id') ?></th>
@@ -64,15 +65,12 @@ $this->start('tb_actions');
             <?php foreach ($athlete->individual_participations as $individualParticipations): ?>
                 <tr>
                     <td><?= h($individualParticipations->position) ?></td>
-                    <td><?= h($individualParticipations->id) ?></td>
                     <td><?= h($individualParticipations->athlete_id) ?></td>
                     <td><?= h($individualParticipations->mode_id) ?></td>
                     <td><?= h($individualParticipations->category_id) ?></td>
                     <td><?= h($individualParticipations->event_id) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'IndividualParticipations', 'action' => 'view', $individualParticipations->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'IndividualParticipations', 'action' => 'edit', $individualParticipations->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'IndividualParticipations', 'action' => 'delete', $individualParticipations->id], ['confirm' => __('Are you sure you want to delete # {0}?', $individualParticipations->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -107,8 +105,6 @@ $this->start('tb_actions');
                     <td><?= h($teams->category_id) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'Teams', 'action' => 'view', $teams->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'Teams', 'action' => 'edit', $teams->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'Teams', 'action' => 'delete', $teams->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teams->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

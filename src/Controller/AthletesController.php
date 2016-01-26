@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Athletes Controller
@@ -34,6 +35,7 @@ class AthletesController extends AppController
         $athlete = $this->Athletes->get($id, [
             'contain' => ['Teams', 'IndividualParticipations']
         ]);
+
         $this->set('athlete', $athlete);
         $this->set('_serialize', ['athlete']);
     }
