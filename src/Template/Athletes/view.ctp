@@ -93,7 +93,7 @@ $this->start('tb_actions');
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">no related IndividualParticipations</p>
+        <p class="panel-body">Sin participaciones</p>
     <?php endif; ?>
 </div>
 <div class="panel panel-default">
@@ -138,6 +138,6 @@ $this->start('tb_actions');
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">no related Teams</p>
+        <p class="panel-body">Sin equipos</p>
     <?php endif; ?>
 </div>
