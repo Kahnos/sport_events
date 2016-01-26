@@ -1,0 +1,1349 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-01-26 13:04+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AgesController.php:52;77
+msgid "The age has been saved."
+msgstr ""
+
+#: Controller/AgesController.php:55;80
+msgid "The age could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AgesController.php:99
+msgid "The age has been deleted."
+msgstr ""
+
+#: Controller/AgesController.php:101
+msgid "The age could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/AthletesController.php:52;78
+msgid "The athlete has been saved."
+msgstr ""
+
+#: Controller/AthletesController.php:55;81
+msgid "The athlete could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AthletesController.php:101
+msgid "The athlete has been deleted."
+msgstr ""
+
+#: Controller/AthletesController.php:103
+msgid "The athlete could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/CategoriesController.php:55;82
+msgid "The category has been saved."
+msgstr ""
+
+#: Controller/CategoriesController.php:58;85
+msgid "The category could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CategoriesController.php:106
+msgid "The category has been deleted."
+msgstr ""
+
+#: Controller/CategoriesController.php:108
+msgid "The category could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/CategoriesEventsModesController.php:55;83
+msgid "The categories events mode has been saved."
+msgstr ""
+
+#: Controller/CategoriesEventsModesController.php:58;86
+msgid "The categories events mode could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CategoriesEventsModesController.php:108
+msgid "The categories events mode has been deleted."
+msgstr ""
+
+#: Controller/CategoriesEventsModesController.php:110
+msgid "The categories events mode could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ClubsController.php:52;77
+msgid "The club has been saved."
+msgstr ""
+
+#: Controller/ClubsController.php:55;80
+msgid "The club could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ClubsController.php:99
+msgid "The club has been deleted."
+msgstr ""
+
+#: Controller/ClubsController.php:101
+msgid "The club could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/DisciplinesController.php:52;78
+msgid "The discipline has been saved."
+msgstr ""
+
+#: Controller/DisciplinesController.php:55;81
+msgid "The discipline could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/DisciplinesController.php:101
+msgid "The discipline has been deleted."
+msgstr ""
+
+#: Controller/DisciplinesController.php:103
+msgid "The discipline could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/DistancesController.php:52;77
+msgid "The distance has been saved."
+msgstr ""
+
+#: Controller/DistancesController.php:55;80
+msgid "The distance could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/DistancesController.php:99
+msgid "The distance has been deleted."
+msgstr ""
+
+#: Controller/DistancesController.php:101
+msgid "The distance could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/EventsController.php:52;77
+msgid "The event has been saved."
+msgstr ""
+
+#: Controller/EventsController.php:55;80
+msgid "The event could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/EventsController.php:99
+msgid "The event has been deleted."
+msgstr ""
+
+#: Controller/EventsController.php:101
+msgid "The event could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/IndividualParticipationsController.php:55;84
+msgid "The individual participation has been saved."
+msgstr ""
+
+#: Controller/IndividualParticipationsController.php:58;87
+msgid "The individual participation could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/IndividualParticipationsController.php:110
+msgid "The individual participation has been deleted."
+msgstr ""
+
+#: Controller/IndividualParticipationsController.php:112
+msgid "The individual participation could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ModesController.php:52;78
+msgid "The mode has been saved."
+msgstr ""
+
+#: Controller/ModesController.php:55;81
+msgid "The mode could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ModesController.php:101
+msgid "The mode has been deleted."
+msgstr ""
+
+#: Controller/ModesController.php:103
+msgid "The mode could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TeamParticipationsController.php:55;84
+msgid "The team participation has been saved."
+msgstr ""
+
+#: Controller/TeamParticipationsController.php:58;87
+msgid "The team participation could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TeamParticipationsController.php:110
+msgid "The team participation has been deleted."
+msgstr ""
+
+#: Controller/TeamParticipationsController.php:112
+msgid "The team participation could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TeamsController.php:55;83
+msgid "The team has been saved."
+msgstr ""
+
+#: Controller/TeamsController.php:58;86
+msgid "The team could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TeamsController.php:108
+msgid "The team has been deleted."
+msgstr ""
+
+#: Controller/TeamsController.php:110
+msgid "The team could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TimesController.php:55;82
+msgid "The time has been saved."
+msgstr ""
+
+#: Controller/TimesController.php:58;85
+msgid "The time could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TimesController.php:106
+msgid "The time has been deleted."
+msgstr ""
+
+#: Controller/TimesController.php:108
+msgid "The time could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Ages/add.ctp:5
+#: Template/Ages/edit.ctp:13
+#: Template/Ages/view.ctp:7
+#: Template/Categories/add.ctp:6
+#: Template/Categories/edit.ctp:14
+#: Template/Categories/index.ctp:6
+#: Template/Categories/view.ctp:9
+msgid "List Ages"
+msgstr ""
+
+#: Template/Ages/add.ctp:6
+#: Template/Ages/edit.ctp:14
+#: Template/Ages/index.ctp:6
+#: Template/Ages/view.ctp:9
+#: Template/Categories/add.ctp:5
+#: Template/Categories/edit.ctp:13
+#: Template/Categories/view.ctp:7
+#: Template/CategoriesEventsModes/add.ctp:8
+#: Template/CategoriesEventsModes/edit.ctp:16
+#: Template/CategoriesEventsModes/index.ctp:8
+#: Template/CategoriesEventsModes/view.ctp:11
+#: Template/Distances/add.ctp:6
+#: Template/Distances/edit.ctp:14
+#: Template/Distances/index.ctp:6
+#: Template/Distances/view.ctp:9
+#: Template/IndividualParticipations/add.ctp:10
+#: Template/IndividualParticipations/edit.ctp:18
+#: Template/IndividualParticipations/index.ctp:10
+#: Template/IndividualParticipations/view.ctp:13
+#: Template/TeamParticipations/add.ctp:10
+#: Template/TeamParticipations/edit.ctp:18
+#: Template/TeamParticipations/index.ctp:10
+#: Template/TeamParticipations/view.ctp:13
+#: Template/Teams/add.ctp:8
+#: Template/Teams/edit.ctp:16
+#: Template/Teams/index.ctp:8
+#: Template/Teams/view.ctp:11
+msgid "List Categories"
+msgstr ""
+
+#: Template/Ages/add.ctp:7
+#: Template/Ages/edit.ctp:15
+#: Template/Ages/index.ctp:7
+#: Template/Ages/view.ctp:10
+#: Template/Categories/index.ctp:5
+#: Template/Categories/view.ctp:8
+#: Template/CategoriesEventsModes/add.ctp:9
+#: Template/CategoriesEventsModes/edit.ctp:17
+#: Template/CategoriesEventsModes/index.ctp:9
+#: Template/CategoriesEventsModes/view.ctp:12
+#: Template/Distances/add.ctp:7
+#: Template/Distances/edit.ctp:15
+#: Template/Distances/index.ctp:7
+#: Template/Distances/view.ctp:10
+#: Template/IndividualParticipations/add.ctp:11
+#: Template/IndividualParticipations/edit.ctp:19
+#: Template/IndividualParticipations/index.ctp:11
+#: Template/IndividualParticipations/view.ctp:14
+#: Template/TeamParticipations/add.ctp:11
+#: Template/TeamParticipations/edit.ctp:19
+#: Template/TeamParticipations/index.ctp:11
+#: Template/TeamParticipations/view.ctp:14
+#: Template/Teams/add.ctp:9
+#: Template/Teams/edit.ctp:17
+#: Template/Teams/index.ctp:9
+#: Template/Teams/view.ctp:12
+msgid "New Category"
+msgstr ""
+
+#: Template/Ages/add.ctp:12
+#: Template/Athletes/add.ctp:14
+#: Template/Categories/add.ctp:22
+#: Template/CategoriesEventsModes/add.ctp:16
+#: Template/Clubs/add.ctp:12
+#: Template/Disciplines/add.ctp:12
+#: Template/Distances/add.ctp:12
+#: Template/Events/add.ctp:16
+#: Template/IndividualParticipations/add.ctp:20
+#: Template/Modes/add.ctp:18
+#: Template/TeamParticipations/add.ctp:20
+#: Template/Teams/add.ctp:18
+#: Template/Times/add.ctp:14
+msgid "Add {0}"
+msgstr ""
+
+#: Template/Ages/add.ctp:19
+#: Template/Athletes/add.ctp:22
+#: Template/Categories/add.ctp:29
+#: Template/CategoriesEventsModes/add.ctp:21
+#: Template/Clubs/add.ctp:17
+#: Template/Disciplines/add.ctp:19
+#: Template/Distances/add.ctp:21
+#: Template/Events/add.ctp:22
+#: Template/IndividualParticipations/add.ctp:29
+#: Template/Modes/add.ctp:25
+#: Template/TeamParticipations/add.ctp:29
+#: Template/Teams/add.ctp:26
+#: Template/Times/add.ctp:25
+msgid "Add"
+msgstr ""
+
+#: Template/Ages/edit.ctp:7
+#: Template/Ages/index.ctp:31
+#: Template/Ages/view.ctp:65
+#: Template/Athletes/edit.ctp:7
+#: Template/Athletes/index.ctp:31
+#: Template/Athletes/view.ctp:71;107
+#: Template/Categories/edit.ctp:7
+#: Template/Categories/index.ctp:43
+#: Template/Categories/view.ctp:79;119;155;195
+#: Template/CategoriesEventsModes/edit.ctp:7
+#: Template/CategoriesEventsModes/index.ctp:41
+#: Template/Clubs/edit.ctp:7
+#: Template/Clubs/index.ctp:27
+#: Template/Clubs/view.ctp:57
+#: Template/Disciplines/edit.ctp:7
+#: Template/Disciplines/index.ctp:25
+#: Template/Disciplines/view.ctp:59
+#: Template/Distances/edit.ctp:7
+#: Template/Distances/index.ctp:35
+#: Template/Distances/view.ctp:73
+#: Template/Events/edit.ctp:7
+#: Template/Events/index.ctp:33
+#: Template/Events/view.ctp:69;109;149
+#: Template/IndividualParticipations/edit.ctp:7
+#: Template/IndividualParticipations/index.ctp:51
+#: Template/IndividualParticipations/view.ctp:89
+#: Template/Modes/edit.ctp:7
+#: Template/Modes/index.ctp:35
+#: Template/Modes/view.ctp:71;111;151;185
+#: Template/TeamParticipations/edit.ctp:7
+#: Template/TeamParticipations/index.ctp:51
+#: Template/TeamParticipations/view.ctp:89
+#: Template/Teams/edit.ctp:7
+#: Template/Teams/index.ctp:41
+#: Template/Teams/view.ctp:75;111
+#: Template/Times/edit.ctp:7
+#: Template/Times/index.ctp:43
+msgid "Delete"
+msgstr ""
+
+#: Template/Ages/edit.ctp:9
+#: Template/Ages/index.ctp:31
+#: Template/Ages/view.ctp:6;65
+#: Template/Athletes/edit.ctp:9
+#: Template/Athletes/index.ctp:31
+#: Template/Athletes/view.ctp:6;71;107
+#: Template/Categories/edit.ctp:9
+#: Template/Categories/index.ctp:43
+#: Template/Categories/view.ctp:6;79;119;155;195
+#: Template/CategoriesEventsModes/edit.ctp:9
+#: Template/CategoriesEventsModes/index.ctp:41
+#: Template/CategoriesEventsModes/view.ctp:6
+#: Template/Clubs/edit.ctp:9
+#: Template/Clubs/index.ctp:27
+#: Template/Clubs/view.ctp:6;57
+#: Template/Disciplines/edit.ctp:9
+#: Template/Disciplines/index.ctp:25
+#: Template/Disciplines/view.ctp:6;59
+#: Template/Distances/edit.ctp:9
+#: Template/Distances/index.ctp:35
+#: Template/Distances/view.ctp:6;73
+#: Template/Events/edit.ctp:9
+#: Template/Events/index.ctp:33
+#: Template/Events/view.ctp:6;69;109;149
+#: Template/IndividualParticipations/edit.ctp:9
+#: Template/IndividualParticipations/index.ctp:51
+#: Template/IndividualParticipations/view.ctp:6;89
+#: Template/Modes/edit.ctp:9
+#: Template/Modes/index.ctp:35
+#: Template/Modes/view.ctp:6;71;111;151;185
+#: Template/TeamParticipations/edit.ctp:9
+#: Template/TeamParticipations/index.ctp:51
+#: Template/TeamParticipations/view.ctp:6;89
+#: Template/Teams/edit.ctp:9
+#: Template/Teams/index.ctp:41
+#: Template/Teams/view.ctp:6;75;111
+#: Template/Times/edit.ctp:9
+#: Template/Times/index.ctp:43
+#: Template/Times/view.ctp:6
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Ages/edit.ctp:20
+#: Template/Athletes/edit.ctp:22
+#: Template/Categories/edit.ctp:30
+#: Template/CategoriesEventsModes/edit.ctp:24
+#: Template/Clubs/edit.ctp:20
+#: Template/Disciplines/edit.ctp:20
+#: Template/Distances/edit.ctp:20
+#: Template/Events/edit.ctp:24
+#: Template/IndividualParticipations/edit.ctp:28
+#: Template/Modes/edit.ctp:26
+#: Template/TeamParticipations/edit.ctp:28
+#: Template/Teams/edit.ctp:26
+#: Template/Times/edit.ctp:22
+msgid "Edit {0}"
+msgstr ""
+
+#: Template/Ages/edit.ctp:27
+#: Template/Athletes/edit.ctp:30
+#: Template/Categories/edit.ctp:37
+#: Template/CategoriesEventsModes/edit.ctp:29
+#: Template/Clubs/edit.ctp:25
+#: Template/Disciplines/edit.ctp:27
+#: Template/Distances/edit.ctp:29
+#: Template/Events/edit.ctp:30
+#: Template/IndividualParticipations/edit.ctp:37
+#: Template/Modes/edit.ctp:33
+#: Template/TeamParticipations/edit.ctp:37
+#: Template/Teams/edit.ctp:34
+#: Template/Times/edit.ctp:33
+msgid "Save"
+msgstr ""
+
+#: Template/Ages/index.ctp:5
+#: Template/Ages/view.ctp:8
+#: Template/Categories/add.ctp:7
+#: Template/Categories/edit.ctp:15
+#: Template/Categories/index.ctp:7
+#: Template/Categories/view.ctp:10
+msgid "New Age"
+msgstr ""
+
+#: Template/Ages/index.ctp:18
+#: Template/Ages/view.ctp:52
+#: Template/Athletes/index.ctp:19
+#: Template/Athletes/view.ctp:56;94
+#: Template/Categories/index.ctp:27
+#: Template/Categories/view.ctp:64;104;142;180
+#: Template/CategoriesEventsModes/index.ctp:22
+#: Template/Clubs/index.ctp:16
+#: Template/Clubs/view.ctp:44
+#: Template/Disciplines/index.ctp:15
+#: Template/Disciplines/view.ctp:47
+#: Template/Distances/index.ctp:20
+#: Template/Distances/view.ctp:60
+#: Template/Events/index.ctp:21
+#: Template/Events/view.ctp:54;94;134
+#: Template/IndividualParticipations/index.ctp:28
+#: Template/IndividualParticipations/view.ctp:72
+#: Template/Modes/index.ctp:23
+#: Template/Modes/view.ctp:56;96;136;173
+#: Template/TeamParticipations/index.ctp:28
+#: Template/TeamParticipations/view.ctp:72
+#: Template/Teams/index.ctp:24
+#: Template/Teams/view.ctp:60;98
+#: Template/Times/index.ctp:23
+msgid "Actions"
+msgstr ""
+
+#: Template/Ages/index.ctp:29
+#: Template/Ages/view.ctp:63
+#: Template/Athletes/index.ctp:29
+#: Template/Athletes/view.ctp:69;105
+#: Template/Categories/index.ctp:41
+#: Template/Categories/view.ctp:77;117;153;193
+#: Template/CategoriesEventsModes/index.ctp:39
+#: Template/Clubs/index.ctp:25
+#: Template/Clubs/view.ctp:55
+#: Template/Disciplines/index.ctp:23
+#: Template/Disciplines/view.ctp:57
+#: Template/Distances/index.ctp:33
+#: Template/Distances/view.ctp:71
+#: Template/Events/index.ctp:31
+#: Template/Events/view.ctp:67;107;147
+#: Template/IndividualParticipations/index.ctp:49
+#: Template/IndividualParticipations/view.ctp:87
+#: Template/Modes/index.ctp:33
+#: Template/Modes/view.ctp:69;109;149;183
+#: Template/TeamParticipations/index.ctp:49
+#: Template/TeamParticipations/view.ctp:87
+#: Template/Teams/index.ctp:39
+#: Template/Teams/view.ctp:73;109
+#: Template/Times/index.ctp:41
+msgid "View"
+msgstr ""
+
+#: Template/Ages/index.ctp:30
+#: Template/Ages/view.ctp:64
+#: Template/Athletes/index.ctp:30
+#: Template/Athletes/view.ctp:70;106
+#: Template/Categories/index.ctp:42
+#: Template/Categories/view.ctp:78;118;154;194
+#: Template/CategoriesEventsModes/index.ctp:40
+#: Template/Clubs/index.ctp:26
+#: Template/Clubs/view.ctp:56
+#: Template/Disciplines/index.ctp:24
+#: Template/Disciplines/view.ctp:58
+#: Template/Distances/index.ctp:34
+#: Template/Distances/view.ctp:72
+#: Template/Events/index.ctp:32
+#: Template/Events/view.ctp:68;108;148
+#: Template/IndividualParticipations/index.ctp:50
+#: Template/IndividualParticipations/view.ctp:88
+#: Template/Modes/index.ctp:34
+#: Template/Modes/view.ctp:70;110;150;184
+#: Template/TeamParticipations/index.ctp:50
+#: Template/TeamParticipations/view.ctp:88
+#: Template/Teams/index.ctp:40
+#: Template/Teams/view.ctp:74;110
+#: Template/Times/index.ctp:42
+msgid "Edit"
+msgstr ""
+
+#: Template/Ages/index.ctp:39
+#: Template/Athletes/index.ctp:39
+#: Template/Categories/index.ctp:51
+#: Template/CategoriesEventsModes/index.ctp:49
+#: Template/Clubs/index.ctp:35
+#: Template/Disciplines/index.ctp:33
+#: Template/Distances/index.ctp:43
+#: Template/Events/index.ctp:41
+#: Template/IndividualParticipations/index.ctp:59
+#: Template/Modes/index.ctp:43
+#: Template/TeamParticipations/index.ctp:59
+#: Template/Teams/index.ctp:49
+#: Template/Times/index.ctp:51
+msgid "previous"
+msgstr ""
+
+#: Template/Ages/index.ctp:41
+#: Template/Athletes/index.ctp:41
+#: Template/Categories/index.ctp:53
+#: Template/CategoriesEventsModes/index.ctp:51
+#: Template/Clubs/index.ctp:37
+#: Template/Disciplines/index.ctp:35
+#: Template/Distances/index.ctp:45
+#: Template/Events/index.ctp:43
+#: Template/IndividualParticipations/index.ctp:61
+#: Template/Modes/index.ctp:45
+#: Template/TeamParticipations/index.ctp:61
+#: Template/Teams/index.ctp:51
+#: Template/Times/index.ctp:53
+msgid "next"
+msgstr ""
+
+#: Template/Ages/view.ctp:5
+msgid "Edit Age"
+msgstr ""
+
+#: Template/Ages/view.ctp:6
+msgid "Delete Age"
+msgstr ""
+
+#: Template/Ages/view.ctp:21
+#: Template/Athletes/view.ctp:23;91
+#: Template/Categories/view.ctp:139
+#: Template/Clubs/view.ctp:21;41
+#: Template/Distances/view.ctp:21
+#: Template/Events/view.ctp:25
+#: Template/Teams/view.ctp:27;95
+msgid "Name"
+msgstr ""
+
+#: Template/Ages/view.ctp:25;48
+#: Template/Athletes/view.ctp:27;51;90
+#: Template/Categories/view.ctp:39;59;99;138
+#: Template/Clubs/view.ctp:25;40
+#: Template/Disciplines/view.ctp:21;44
+#: Template/Distances/view.ctp:25;56
+#: Template/Events/view.ctp:29;49;89
+#: Template/IndividualParticipations/view.ctp:49;68
+#: Template/Modes/view.ctp:31;51;91;170
+#: Template/TeamParticipations/view.ctp:49;68
+#: Template/Teams/view.ctp:39;55;94
+#: Template/Times/view.ctp:31
+msgid "Id"
+msgstr ""
+
+#: Template/Ages/view.ctp:29
+msgid "Min Age"
+msgstr ""
+
+#: Template/Ages/view.ctp:33
+msgid "Max Age"
+msgstr ""
+
+#: Template/Ages/view.ctp:42
+#: Template/Distances/view.ctp:50
+msgid "Related Categories"
+msgstr ""
+
+#: Template/Ages/view.ctp:49
+#: Template/Athletes/view.ctp:35
+#: Template/Categories/view.ctp:43
+#: Template/Distances/view.ctp:57
+#: Template/Teams/view.ctp:96
+msgid "Sex"
+msgstr ""
+
+#: Template/Ages/view.ctp:50
+#: Template/Distances/view.ctp:58
+msgid "Age Id"
+msgstr ""
+
+#: Template/Ages/view.ctp:51
+#: Template/Distances/view.ctp:59
+msgid "Distance Id"
+msgstr ""
+
+#: Template/Athletes/add.ctp:5
+#: Template/Athletes/edit.ctp:13
+#: Template/Athletes/view.ctp:7
+#: Template/IndividualParticipations/add.ctp:6
+#: Template/IndividualParticipations/edit.ctp:14
+#: Template/IndividualParticipations/index.ctp:6
+#: Template/IndividualParticipations/view.ctp:9
+#: Template/Teams/add.ctp:12
+#: Template/Teams/edit.ctp:20
+#: Template/Teams/index.ctp:12
+#: Template/Teams/view.ctp:15
+msgid "List Athletes"
+msgstr ""
+
+#: Template/Athletes/add.ctp:6
+#: Template/Athletes/edit.ctp:14
+#: Template/Athletes/view.ctp:9
+#: Template/Categories/add.ctp:10
+#: Template/Categories/edit.ctp:18
+#: Template/Categories/view.ctp:13
+#: Template/Events/add.ctp:6
+#: Template/Events/edit.ctp:14
+#: Template/Events/view.ctp:9
+#: Template/IndividualParticipations/add.ctp:5
+#: Template/IndividualParticipations/edit.ctp:13
+#: Template/IndividualParticipations/view.ctp:7
+#: Template/Modes/add.ctp:6
+#: Template/Modes/edit.ctp:14
+#: Template/Modes/view.ctp:9
+#: Template/Times/add.ctp:6
+#: Template/Times/edit.ctp:14
+#: Template/Times/view.ctp:9
+msgid "List Individual Participations"
+msgstr ""
+
+#: Template/Athletes/add.ctp:7
+#: Template/Athletes/edit.ctp:15
+#: Template/Athletes/index.ctp:7
+#: Template/Athletes/view.ctp:10
+#: Template/Categories/add.ctp:11
+#: Template/Categories/edit.ctp:19
+#: Template/Categories/index.ctp:11
+#: Template/Categories/view.ctp:14
+#: Template/Events/add.ctp:7
+#: Template/Events/edit.ctp:15
+#: Template/Events/index.ctp:7
+#: Template/Events/view.ctp:10
+#: Template/IndividualParticipations/index.ctp:5
+#: Template/IndividualParticipations/view.ctp:8
+#: Template/Modes/add.ctp:7
+#: Template/Modes/edit.ctp:15
+#: Template/Modes/index.ctp:7
+#: Template/Modes/view.ctp:10
+#: Template/Times/add.ctp:7
+#: Template/Times/edit.ctp:15
+#: Template/Times/index.ctp:7
+#: Template/Times/view.ctp:10
+msgid "New Individual Participation"
+msgstr ""
+
+#: Template/Athletes/add.ctp:8
+#: Template/Athletes/edit.ctp:16
+#: Template/Athletes/index.ctp:8
+#: Template/Athletes/view.ctp:11
+#: Template/Categories/add.ctp:14
+#: Template/Categories/edit.ctp:22
+#: Template/Categories/index.ctp:14
+#: Template/Categories/view.ctp:17
+#: Template/Clubs/add.ctp:6
+#: Template/Clubs/edit.ctp:14
+#: Template/Clubs/index.ctp:6
+#: Template/Clubs/view.ctp:9
+#: Template/TeamParticipations/add.ctp:6
+#: Template/TeamParticipations/edit.ctp:14
+#: Template/TeamParticipations/index.ctp:6
+#: Template/TeamParticipations/view.ctp:9
+#: Template/Teams/add.ctp:5
+#: Template/Teams/edit.ctp:13
+#: Template/Teams/view.ctp:7
+msgid "List Teams"
+msgstr ""
+
+#: Template/Athletes/add.ctp:9
+#: Template/Athletes/edit.ctp:17
+#: Template/Athletes/index.ctp:9
+#: Template/Athletes/view.ctp:12
+#: Template/Categories/add.ctp:15
+#: Template/Categories/edit.ctp:23
+#: Template/Categories/index.ctp:15
+#: Template/Categories/view.ctp:18
+#: Template/Clubs/add.ctp:7
+#: Template/Clubs/edit.ctp:15
+#: Template/Clubs/index.ctp:7
+#: Template/Clubs/view.ctp:10
+#: Template/TeamParticipations/add.ctp:7
+#: Template/TeamParticipations/edit.ctp:15
+#: Template/TeamParticipations/index.ctp:7
+#: Template/TeamParticipations/view.ctp:10
+#: Template/Teams/index.ctp:5
+#: Template/Teams/view.ctp:8
+msgid "New Team"
+msgstr ""
+
+#: Template/Athletes/index.ctp:5
+#: Template/Athletes/view.ctp:8
+#: Template/IndividualParticipations/add.ctp:7
+#: Template/IndividualParticipations/edit.ctp:15
+#: Template/IndividualParticipations/index.ctp:7
+#: Template/IndividualParticipations/view.ctp:10
+#: Template/Teams/add.ctp:13
+#: Template/Teams/edit.ctp:21
+#: Template/Teams/index.ctp:13
+#: Template/Teams/view.ctp:16
+msgid "New Athlete"
+msgstr ""
+
+#: Template/Athletes/index.ctp:6
+#: Template/Categories/index.ctp:10
+#: Template/Events/index.ctp:6
+#: Template/Modes/index.ctp:6
+#: Template/Times/index.ctp:6
+msgid "List IndividualParticipations"
+msgstr ""
+
+#: Template/Athletes/view.ctp:5
+msgid "Edit Athlete"
+msgstr ""
+
+#: Template/Athletes/view.ctp:6
+msgid "Delete Athlete"
+msgstr ""
+
+#: Template/Athletes/view.ctp:31
+#: Template/Teams/view.ctp:97
+msgid "Date Of Birth"
+msgstr ""
+
+#: Template/Athletes/view.ctp:44
+#: Template/Categories/view.ctp:52
+#: Template/Events/view.ctp:42
+#: Template/Modes/view.ctp:44
+msgid "Related IndividualParticipations"
+msgstr ""
+
+#: Template/Athletes/view.ctp:50
+#: Template/Categories/view.ctp:58;98
+#: Template/Events/view.ctp:48;88
+#: Template/IndividualParticipations/view.ctp:45
+#: Template/Modes/view.ctp:50;90
+#: Template/TeamParticipations/view.ctp:45
+#: Template/Teams/view.ctp:54
+msgid "Position"
+msgstr ""
+
+#: Template/Athletes/view.ctp:52
+#: Template/Categories/view.ctp:60
+#: Template/Events/view.ctp:50
+#: Template/Modes/view.ctp:52
+msgid "Athlete Id"
+msgstr ""
+
+#: Template/Athletes/view.ctp:53
+#: Template/Categories/view.ctp:61;101;177
+#: Template/Events/view.ctp:51;91;131
+#: Template/Modes/view.ctp:53;93;133
+#: Template/Teams/view.ctp:57
+msgid "Mode Id"
+msgstr ""
+
+#: Template/Athletes/view.ctp:54;93
+#: Template/Categories/view.ctp:62;102;141;178
+#: Template/Clubs/view.ctp:43
+#: Template/Events/view.ctp:52;92;132
+#: Template/Modes/view.ctp:54;94;134
+#: Template/Teams/view.ctp:58
+msgid "Category Id"
+msgstr ""
+
+#: Template/Athletes/view.ctp:55
+#: Template/Categories/view.ctp:63;103;179
+#: Template/Events/view.ctp:53;93;133
+#: Template/Modes/view.ctp:55;95;135
+#: Template/Teams/view.ctp:59
+msgid "Event Id"
+msgstr ""
+
+#: Template/Athletes/view.ctp:84
+#: Template/Categories/view.ctp:132
+#: Template/Clubs/view.ctp:34
+msgid "Related Teams"
+msgstr ""
+
+#: Template/Athletes/view.ctp:92
+#: Template/Categories/view.ctp:140
+#: Template/Clubs/view.ctp:42
+msgid "Club Id"
+msgstr ""
+
+#: Template/Categories/add.ctp:8
+#: Template/Categories/edit.ctp:16
+#: Template/Categories/index.ctp:8
+#: Template/Categories/view.ctp:11
+#: Template/Distances/add.ctp:5
+#: Template/Distances/edit.ctp:13
+#: Template/Distances/view.ctp:7
+msgid "List Distances"
+msgstr ""
+
+#: Template/Categories/add.ctp:9
+#: Template/Categories/edit.ctp:17
+#: Template/Categories/index.ctp:9
+#: Template/Categories/view.ctp:12
+#: Template/Distances/index.ctp:5
+#: Template/Distances/view.ctp:8
+msgid "New Distance"
+msgstr ""
+
+#: Template/Categories/add.ctp:12
+#: Template/Categories/edit.ctp:20
+#: Template/Categories/view.ctp:15
+#: Template/Events/add.ctp:8
+#: Template/Events/edit.ctp:16
+#: Template/Events/view.ctp:11
+#: Template/Modes/add.ctp:8
+#: Template/Modes/edit.ctp:16
+#: Template/Modes/view.ctp:11
+#: Template/TeamParticipations/add.ctp:5
+#: Template/TeamParticipations/edit.ctp:13
+#: Template/TeamParticipations/view.ctp:7
+#: Template/Teams/add.ctp:10
+#: Template/Teams/edit.ctp:18
+#: Template/Teams/view.ctp:13
+#: Template/Times/add.ctp:8
+#: Template/Times/edit.ctp:16
+#: Template/Times/view.ctp:11
+msgid "List Team Participations"
+msgstr ""
+
+#: Template/Categories/add.ctp:13
+#: Template/Categories/edit.ctp:21
+#: Template/Categories/index.ctp:13
+#: Template/Categories/view.ctp:16
+#: Template/Events/add.ctp:9
+#: Template/Events/edit.ctp:17
+#: Template/Events/index.ctp:9
+#: Template/Events/view.ctp:12
+#: Template/Modes/add.ctp:9
+#: Template/Modes/edit.ctp:17
+#: Template/Modes/index.ctp:9
+#: Template/Modes/view.ctp:12
+#: Template/TeamParticipations/index.ctp:5
+#: Template/TeamParticipations/view.ctp:8
+#: Template/Teams/add.ctp:11
+#: Template/Teams/edit.ctp:19
+#: Template/Teams/index.ctp:11
+#: Template/Teams/view.ctp:14
+#: Template/Times/add.ctp:9
+#: Template/Times/edit.ctp:17
+#: Template/Times/index.ctp:9
+#: Template/Times/view.ctp:12
+msgid "New Team Participation"
+msgstr ""
+
+#: Template/Categories/add.ctp:16
+#: Template/Categories/edit.ctp:24
+#: Template/Categories/index.ctp:16
+#: Template/Categories/view.ctp:19
+#: Template/Events/add.ctp:10
+#: Template/Events/edit.ctp:18
+#: Template/Events/index.ctp:10
+#: Template/Events/view.ctp:13
+#: Template/Modes/add.ctp:10
+#: Template/Modes/edit.ctp:18
+#: Template/Modes/index.ctp:10
+#: Template/Modes/view.ctp:13
+msgid "List Winners"
+msgstr ""
+
+#: Template/Categories/add.ctp:17
+#: Template/Categories/edit.ctp:25
+#: Template/Categories/index.ctp:17
+#: Template/Categories/view.ctp:20
+#: Template/Events/add.ctp:11
+#: Template/Events/edit.ctp:19
+#: Template/Events/index.ctp:11
+#: Template/Events/view.ctp:14
+#: Template/Modes/add.ctp:11
+#: Template/Modes/edit.ctp:19
+#: Template/Modes/index.ctp:11
+#: Template/Modes/view.ctp:14
+msgid "New Winner"
+msgstr ""
+
+#: Template/Categories/index.ctp:12
+#: Template/Events/index.ctp:8
+#: Template/Modes/index.ctp:8
+#: Template/Teams/index.ctp:10
+#: Template/Times/index.ctp:8
+msgid "List TeamParticipations"
+msgstr ""
+
+#: Template/Categories/view.ctp:5
+msgid "Edit Category"
+msgstr ""
+
+#: Template/Categories/view.ctp:6
+msgid "Delete Category"
+msgstr ""
+
+#: Template/Categories/view.ctp:31
+msgid "Age"
+msgstr ""
+
+#: Template/Categories/view.ctp:35
+msgid "Distance"
+msgstr ""
+
+#: Template/Categories/view.ctp:92
+#: Template/Events/view.ctp:82
+#: Template/Modes/view.ctp:84
+#: Template/Teams/view.ctp:48
+msgid "Related TeamParticipations"
+msgstr ""
+
+#: Template/Categories/view.ctp:100
+#: Template/Events/view.ctp:90
+#: Template/Modes/view.ctp:92
+#: Template/Teams/view.ctp:56
+msgid "Team Id"
+msgstr ""
+
+#: Template/Categories/view.ctp:168
+#: Template/Events/view.ctp:122
+#: Template/Modes/view.ctp:124
+msgid "Related Winners"
+msgstr ""
+
+#: Template/Categories/view.ctp:174
+#: Template/Events/view.ctp:128
+#: Template/Modes/view.ctp:130
+msgid "Gold Id"
+msgstr ""
+
+#: Template/Categories/view.ctp:175
+#: Template/Events/view.ctp:129
+#: Template/Modes/view.ctp:131
+msgid "Silver Id"
+msgstr ""
+
+#: Template/Categories/view.ctp:176
+#: Template/Events/view.ctp:130
+#: Template/Modes/view.ctp:132
+msgid "Bronze Id"
+msgstr ""
+
+#: Template/CategoriesEventsModes/add.ctp:5
+#: Template/CategoriesEventsModes/edit.ctp:13
+#: Template/CategoriesEventsModes/view.ctp:7
+msgid "List Categories Events Modes"
+msgstr ""
+
+#: Template/CategoriesEventsModes/add.ctp:6
+#: Template/CategoriesEventsModes/edit.ctp:14
+#: Template/CategoriesEventsModes/index.ctp:6
+#: Template/CategoriesEventsModes/view.ctp:9
+#: Template/Disciplines/add.ctp:6
+#: Template/Disciplines/edit.ctp:14
+#: Template/Disciplines/index.ctp:6
+#: Template/Disciplines/view.ctp:9
+#: Template/IndividualParticipations/add.ctp:8
+#: Template/IndividualParticipations/edit.ctp:16
+#: Template/IndividualParticipations/index.ctp:8
+#: Template/IndividualParticipations/view.ctp:11
+#: Template/Modes/add.ctp:5
+#: Template/Modes/edit.ctp:13
+#: Template/Modes/view.ctp:7
+#: Template/TeamParticipations/add.ctp:8
+#: Template/TeamParticipations/edit.ctp:16
+#: Template/TeamParticipations/index.ctp:8
+#: Template/TeamParticipations/view.ctp:11
+msgid "List Modes"
+msgstr ""
+
+#: Template/CategoriesEventsModes/add.ctp:7
+#: Template/CategoriesEventsModes/edit.ctp:15
+#: Template/CategoriesEventsModes/index.ctp:7
+#: Template/CategoriesEventsModes/view.ctp:10
+#: Template/Disciplines/add.ctp:7
+#: Template/Disciplines/edit.ctp:15
+#: Template/Disciplines/index.ctp:7
+#: Template/Disciplines/view.ctp:10
+#: Template/IndividualParticipations/add.ctp:9
+#: Template/IndividualParticipations/edit.ctp:17
+#: Template/IndividualParticipations/index.ctp:9
+#: Template/IndividualParticipations/view.ctp:12
+#: Template/Modes/index.ctp:5
+#: Template/Modes/view.ctp:8
+#: Template/TeamParticipations/add.ctp:9
+#: Template/TeamParticipations/edit.ctp:17
+#: Template/TeamParticipations/index.ctp:9
+#: Template/TeamParticipations/view.ctp:12
+msgid "New Mode"
+msgstr ""
+
+#: Template/CategoriesEventsModes/add.ctp:10
+#: Template/CategoriesEventsModes/edit.ctp:18
+#: Template/CategoriesEventsModes/index.ctp:10
+#: Template/CategoriesEventsModes/view.ctp:13
+#: Template/Events/add.ctp:5
+#: Template/Events/edit.ctp:13
+#: Template/Events/view.ctp:7
+#: Template/IndividualParticipations/add.ctp:12
+#: Template/IndividualParticipations/edit.ctp:20
+#: Template/IndividualParticipations/index.ctp:12
+#: Template/IndividualParticipations/view.ctp:15
+#: Template/TeamParticipations/add.ctp:12
+#: Template/TeamParticipations/edit.ctp:20
+#: Template/TeamParticipations/index.ctp:12
+#: Template/TeamParticipations/view.ctp:15
+msgid "List Events"
+msgstr ""
+
+#: Template/CategoriesEventsModes/add.ctp:11
+#: Template/CategoriesEventsModes/edit.ctp:19
+#: Template/CategoriesEventsModes/index.ctp:11
+#: Template/CategoriesEventsModes/view.ctp:14
+#: Template/Events/index.ctp:5
+#: Template/Events/view.ctp:8
+#: Template/IndividualParticipations/add.ctp:13
+#: Template/IndividualParticipations/edit.ctp:21
+#: Template/IndividualParticipations/index.ctp:13
+#: Template/IndividualParticipations/view.ctp:16
+#: Template/TeamParticipations/add.ctp:13
+#: Template/TeamParticipations/edit.ctp:21
+#: Template/TeamParticipations/index.ctp:13
+#: Template/TeamParticipations/view.ctp:16
+msgid "New Event"
+msgstr ""
+
+#: Template/CategoriesEventsModes/index.ctp:5
+#: Template/CategoriesEventsModes/view.ctp:8
+msgid "New Categories Events Mode"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:5
+msgid "Edit Categories Events Mode"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:6
+msgid "Delete Categories Events Mode"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:25
+#: Template/IndividualParticipations/view.ctp:33
+#: Template/TeamParticipations/view.ctp:33
+msgid "Mode"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:29
+#: Template/IndividualParticipations/view.ctp:37
+#: Template/TeamParticipations/view.ctp:37
+#: Template/Teams/view.ctp:35
+msgid "Category"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:33
+#: Template/IndividualParticipations/view.ctp:41
+#: Template/TeamParticipations/view.ctp:41
+msgid "Event"
+msgstr ""
+
+#: Template/CategoriesEventsModes/view.ctp:37
+msgid "Hour"
+msgstr ""
+
+#: Template/Clubs/add.ctp:5
+#: Template/Clubs/edit.ctp:13
+#: Template/Clubs/view.ctp:7
+#: Template/Teams/add.ctp:6
+#: Template/Teams/edit.ctp:14
+#: Template/Teams/index.ctp:6
+#: Template/Teams/view.ctp:9
+msgid "List Clubs"
+msgstr ""
+
+#: Template/Clubs/index.ctp:5
+#: Template/Clubs/view.ctp:8
+#: Template/Teams/add.ctp:7
+#: Template/Teams/edit.ctp:15
+#: Template/Teams/index.ctp:7
+#: Template/Teams/view.ctp:10
+msgid "New Club"
+msgstr ""
+
+#: Template/Clubs/view.ctp:5
+msgid "Edit Club"
+msgstr ""
+
+#: Template/Clubs/view.ctp:6
+msgid "Delete Club"
+msgstr ""
+
+#: Template/Disciplines/add.ctp:5
+#: Template/Disciplines/edit.ctp:13
+#: Template/Disciplines/view.ctp:7
+#: Template/Modes/add.ctp:12
+#: Template/Modes/edit.ctp:20
+#: Template/Modes/index.ctp:12
+#: Template/Modes/view.ctp:15
+msgid "List Disciplines"
+msgstr ""
+
+#: Template/Disciplines/index.ctp:5
+#: Template/Disciplines/view.ctp:8
+#: Template/Modes/add.ctp:13
+#: Template/Modes/edit.ctp:21
+#: Template/Modes/index.ctp:13
+#: Template/Modes/view.ctp:16
+msgid "New Discipline"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:5
+msgid "Edit Discipline"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:6
+msgid "Delete Discipline"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:25;45
+#: Template/Modes/view.ctp:27;171
+msgid "Type"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:29
+#: Template/Modes/view.ctp:172
+msgid "Sub Type"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:38
+msgid "Related Modes"
+msgstr ""
+
+#: Template/Disciplines/view.ctp:46
+#: Template/Modes/view.ctp:35
+msgid "Number Of Disciplines"
+msgstr ""
+
+#: Template/Distances/view.ctp:5
+msgid "Edit Distance"
+msgstr ""
+
+#: Template/Distances/view.ctp:6
+msgid "Delete Distance"
+msgstr ""
+
+#: Template/Distances/view.ctp:29
+msgid "Distance 1"
+msgstr ""
+
+#: Template/Distances/view.ctp:33
+msgid "Distance 2"
+msgstr ""
+
+#: Template/Distances/view.ctp:37
+msgid "Distance 3"
+msgstr ""
+
+#: Template/Distances/view.ctp:41
+msgid "Distance 4"
+msgstr ""
+
+#: Template/Events/view.ctp:5
+msgid "Edit Event"
+msgstr ""
+
+#: Template/Events/view.ctp:6
+msgid "Delete Event"
+msgstr ""
+
+#: Template/Events/view.ctp:33
+msgid "Date"
+msgstr ""
+
+#: Template/IndividualParticipations/add.ctp:14
+#: Template/IndividualParticipations/edit.ctp:22
+#: Template/IndividualParticipations/index.ctp:14
+#: Template/IndividualParticipations/view.ctp:17
+#: Template/TeamParticipations/add.ctp:14
+#: Template/TeamParticipations/edit.ctp:22
+#: Template/TeamParticipations/index.ctp:14
+#: Template/TeamParticipations/view.ctp:17
+#: Template/Times/add.ctp:5
+#: Template/Times/edit.ctp:13
+#: Template/Times/view.ctp:7
+msgid "List Times"
+msgstr ""
+
+#: Template/IndividualParticipations/add.ctp:15
+#: Template/IndividualParticipations/edit.ctp:23
+#: Template/IndividualParticipations/index.ctp:15
+#: Template/IndividualParticipations/view.ctp:18
+#: Template/TeamParticipations/add.ctp:15
+#: Template/TeamParticipations/edit.ctp:23
+#: Template/TeamParticipations/index.ctp:15
+#: Template/TeamParticipations/view.ctp:18
+#: Template/Times/index.ctp:5
+#: Template/Times/view.ctp:8
+msgid "New Time"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:5
+msgid "Edit Individual Participation"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:6
+msgid "Delete Individual Participation"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:29
+msgid "Athlete"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:58
+#: Template/TeamParticipations/view.ctp:58
+msgid "Related Times"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:64
+#: Template/TeamParticipations/view.ctp:64
+#: Template/Times/view.ctp:35
+msgid "Time 1"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:65
+#: Template/TeamParticipations/view.ctp:65
+#: Template/Times/view.ctp:39
+msgid "Time 2"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:66
+#: Template/TeamParticipations/view.ctp:66
+#: Template/Times/view.ctp:43
+msgid "Time 3"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:67
+#: Template/TeamParticipations/view.ctp:67
+#: Template/Times/view.ctp:47
+msgid "Time 4"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:69
+#: Template/TeamParticipations/view.ctp:69
+msgid "Individual Participation Id"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:70
+#: Template/TeamParticipations/view.ctp:70
+msgid "Team Participation Id"
+msgstr ""
+
+#: Template/IndividualParticipations/view.ctp:71
+#: Template/TeamParticipations/view.ctp:71
+#: Template/Times/view.ctp:51
+msgid "Time Total"
+msgstr ""
+
+#: Template/Modes/view.ctp:5
+msgid "Edit Mode"
+msgstr ""
+
+#: Template/Modes/view.ctp:6
+msgid "Delete Mode"
+msgstr ""
+
+#: Template/Modes/view.ctp:164
+msgid "Related Disciplines"
+msgstr ""
+
+#: Template/TeamParticipations/view.ctp:5
+msgid "Edit Team Participation"
+msgstr ""
+
+#: Template/TeamParticipations/view.ctp:6
+msgid "Delete Team Participation"
+msgstr ""
+
+#: Template/TeamParticipations/view.ctp:29
+msgid "Team"
+msgstr ""
+
+#: Template/Teams/view.ctp:5
+msgid "Edit Team"
+msgstr ""
+
+#: Template/Teams/view.ctp:6
+msgid "Delete Team"
+msgstr ""
+
+#: Template/Teams/view.ctp:31
+msgid "Club"
+msgstr ""
+
+#: Template/Teams/view.ctp:88
+msgid "Related Athletes"
+msgstr ""
+
+#: Template/Times/view.ctp:5
+msgid "Edit Time"
+msgstr ""
+
+#: Template/Times/view.ctp:6
+msgid "Delete Time"
+msgstr ""
+
+#: Template/Times/view.ctp:23
+msgid "Individual Participation"
+msgstr ""
+
+#: Template/Times/view.ctp:27
+msgid "Team Participation"
+msgstr ""
+
