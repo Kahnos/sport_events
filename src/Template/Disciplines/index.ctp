@@ -12,6 +12,8 @@ $this->start('tb_actions');
     <thead>
         <tr>
             <th><?= $this->Paginator->sort('id'); ?></th>
+            <th><?= $this->Paginator->sort('type'); ?></th>
+            <th><?= $this->Paginator->sort('sub_type'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
         </tr>
     </thead>
@@ -19,6 +21,8 @@ $this->start('tb_actions');
         <?php foreach ($disciplines as $discipline): ?>
         <tr>
             <td><?= $this->Number->format($discipline->id) ?></td>
+            <td><?= h($discipline->type) ?></td>
+            <td><?= h($discipline->sub_type) ?></td>
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $discipline->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                 <?= $this->Html->link('', ['action' => 'edit', $discipline->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>

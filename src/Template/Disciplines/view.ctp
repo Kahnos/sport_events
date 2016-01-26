@@ -18,16 +18,16 @@ $this->start('tb_actions');
     </div>
     <table class="table table-striped" cellpadding="0" cellspacing="0">
         <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($discipline->id) ?></td>
-        </tr>
-        <tr>
             <td><?= __('Type') ?></td>
-            <td><?= $this->Text->autoParagraph(h($discipline->type)); ?></td>
+            <td><?= h($discipline->type) ?></td>
         </tr>
         <tr>
             <td><?= __('Sub Type') ?></td>
-            <td><?= $this->Text->autoParagraph(h($discipline->sub_type)); ?></td>
+            <td><?= h($discipline->sub_type) ?></td>
+        </tr>
+        <tr>
+            <td><?= __('Id') ?></td>
+            <td><?= $this->Number->format($discipline->id) ?></td>
         </tr>
     </table>
 </div>

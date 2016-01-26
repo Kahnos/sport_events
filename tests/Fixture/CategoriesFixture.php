@@ -18,7 +18,7 @@ class CategoriesFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'sex' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'sex' => ['type' => 'string', 'fixed' => true, 'length' => 1, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'age_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'distance_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
@@ -27,8 +27,8 @@ class CategoriesFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'Relationship37' => ['type' => 'foreign', 'columns' => ['age_id'], 'references' => ['ages', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
-            'Relationship38' => ['type' => 'foreign', 'columns' => ['distance_id'], 'references' => ['distances', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'Relationship37' => ['type' => 'foreign', 'columns' => ['age_id'], 'references' => ['ages', 'id'], 'update' => 'cascade', 'delete' => 'noAction', 'length' => []],
+            'Relationship38' => ['type' => 'foreign', 'columns' => ['distance_id'], 'references' => ['distances', 'id'], 'update' => 'cascade', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -45,7 +45,7 @@ class CategoriesFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'sex' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+            'sex' => 'Lorem ipsum dolor sit ame',
             'age_id' => 1,
             'distance_id' => 1
         ],

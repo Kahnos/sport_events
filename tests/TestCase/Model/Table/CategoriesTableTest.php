@@ -21,12 +21,17 @@ class CategoriesTableTest extends TestCase
         'app.ages',
         'app.distances',
         'app.individual_participations',
-        'app.team_participations',
+        'app.athletes',
         'app.teams',
         'app.clubs',
-        'app.athletes',
-        'app.athletes_teams',
-        'app.winners'
+        'app.team_participations',
+        'app.modes',
+        'app.winners',
+        'app.disciplines',
+        'app.disciplines_modes',
+        'app.events',
+        'app.times',
+        'app.athletes_teams'
     ];
 
     /**

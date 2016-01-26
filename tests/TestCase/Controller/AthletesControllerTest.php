@@ -18,8 +18,19 @@ class AthletesControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.athletes',
         'app.individual_participations',
+        'app.modes',
+        'app.team_participations',
         'app.teams',
-        'app.athletes_teams'
+        'app.clubs',
+        'app.categories',
+        'app.ages',
+        'app.distances',
+        'app.winners',
+        'app.athletes_teams',
+        'app.events',
+        'app.times',
+        'app.disciplines',
+        'app.disciplines_modes'
     ];
 
     /**

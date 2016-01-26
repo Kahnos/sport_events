@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property string $name
  * @property string $sex
  * @property \Cake\I18n\Time $date_of_birth
+ * @property int $CI
  * @property \App\Model\Entity\IndividualParticipation[] $individual_participations
  * @property \App\Model\Entity\Team[] $teams
  */

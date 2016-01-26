@@ -15,7 +15,9 @@ $this->start('tb_actions');
         <tr>
             <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('name'); ?></th>
+            <th><?= $this->Paginator->sort('sex'); ?></th>
             <th><?= $this->Paginator->sort('date_of_birth'); ?></th>
+            <th><?= $this->Paginator->sort('CI'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
         </tr>
     </thead>
@@ -24,7 +26,9 @@ $this->start('tb_actions');
         <tr>
             <td><?= $this->Number->format($athlete->id) ?></td>
             <td><?= h($athlete->name) ?></td>
+            <td><?= h($athlete->sex) ?></td>
             <td><?= h($athlete->date_of_birth) ?></td>
+            <td><?= $this->Number->format($athlete->CI) ?></td>
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $athlete->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                 <?= $this->Html->link('', ['action' => 'edit', $athlete->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
