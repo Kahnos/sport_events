@@ -1,4 +1,4 @@
-﻿/*
+/*
 SQLyog Community v12.18 (64 bit)
 MySQL - 5.6.21 : Database - proyecto_bd
 *********************************************************************
@@ -313,12 +313,11 @@ insert  into `categories`(`id`,`sex`,`age_id`,`distance_id`) values
 DROP TABLE IF EXISTS `categories_events_modes`;
 
 CREATE TABLE `categories_events_modes` (
-  `hour` Time NOT NULL,
-  `id` Int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `event_id` Int UNSIGNED,
-  `mode_id` Int UNSIGNED,
-  `categories_id` Int UNSIGNED,
-  PRIMARY KEY (`id`)
+  `mode_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `event_id` int(10) unsigned NOT NULL,
+  `hour` time NOT NULL,
+  PRIMARY KEY (`mode_id`,`category_id`,`event_id`),
   KEY `Posee` (`category_id`),
   KEY `Evento_Modalidad_Categoria` (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -7713,12 +7712,16 @@ insert  into `events`(`id`,`name`,`date`) values
 DROP TABLE IF EXISTS `individual_participations`;
 
 CREATE TABLE `individual_participations` (
-  `position` Smallint UNSIGNED,
-  `id` Int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `athlete_id` Int UNSIGNED NOT NULL,
-  `cat_ev_mode_id` Int UNSIGNED,
-  PRIMARY KEY (`id`)
+  `position` smallint(5) unsigned DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `athlete_id` int(10) unsigned NOT NULL,
+  `mode_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `event_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `composed_unique_2` (`event_id`,`athlete_id`,`mode_id`,`category_id`),
   KEY `IX_Relationship26` (`athlete_id`),
+  KEY `IX_Relationship27` (`mode_id`,`category_id`,`event_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `individual_participations` */
@@ -7773,12 +7776,16 @@ insert  into `modes`(`id`,`type`,`number_of_disciplines`) values
 DROP TABLE IF EXISTS `team_participations`;
 
 CREATE TABLE `team_participations` (
-  `position` Smallint UNSIGNED,
-  `id` Int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `team_id` Int UNSIGNED NOT NULL,
-  `cat_ev_mode_id` Int UNSIGNED,
-  PRIMARY KEY (`id`)
+  `position` smallint(5) unsigned DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `team_id` int(10) unsigned NOT NULL,
+  `mode_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `event_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `composed_unique_1` (`event_id`,`team_id`,`mode_id`,`category_id`),
   KEY `IX_Relationship28` (`team_id`),
+  KEY `IX_Relationship29` (`mode_id`,`category_id`,`event_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `team_participations` */
@@ -7855,17 +7862,16 @@ insert  into `times`(`time_1`,`time_2`,`time_3`,`time_4`,`id`,`individual_partic
 
 DROP TABLE IF EXISTS `winners`; 
 
-CREATE TABLE `winners`
-(
-  `gold_id` Int UNSIGNED,
-  `silver_id` Int,
-  `bronze_id` Int,
-  `id` Int UNSIGNED NOT NULL
-)
-;
+CREATE TABLE `winners` (
+  `gold_id` int(10) unsigned DEFAULT NULL,
+  `silver_id` int(11) DEFAULT NULL,
+  `bronze_id` int(11) DEFAULT NULL,
+  `mode_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `event_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`mode_id`,`category_id`,`event_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-ALTER TABLE `winners` ADD  PRIMARY KEY (`id`)
-;
 /*Data for the table `winners` */
 
 insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`) values 
@@ -7875,6 +7881,12 @@ insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`
 
 -- Create relationships section ------------------------------------------------- 
 
+ALTER TABLE `categories_events_modes` ADD CONSTRAINT `Tiene` FOREIGN KEY (`mode_id`) REFERENCES `modes` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
+;
+
+ALTER TABLE `categories_events_modes` ADD CONSTRAINT `Posee` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
+;
+
 ALTER TABLE `disciplines_modes` ADD CONSTRAINT `Relationship14` FOREIGN KEY (`discipline_id`) REFERENCES `disciplines` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ;
 
@@ -7882,6 +7894,9 @@ ALTER TABLE `disciplines_modes` ADD CONSTRAINT `Relationship15` FOREIGN KEY (`mo
 ;
 
 ALTER TABLE `teams` ADD CONSTRAINT `Relationship17` FOREIGN KEY (`club_id`) REFERENCES `clubs` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+;
+
+ALTER TABLE `categories_events_modes` ADD CONSTRAINT `Evento_Modalidad_Categoria` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
 ALTER TABLE `athletes_teams` ADD CONSTRAINT `Relationship24` FOREIGN KEY (`athlete_id`) REFERENCES `athletes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -7893,13 +7908,13 @@ ALTER TABLE `athletes_teams` ADD CONSTRAINT `Relationship25` FOREIGN KEY (`team_
 ALTER TABLE `individual_participations` ADD CONSTRAINT `Relationship26` FOREIGN KEY (`athlete_id`) REFERENCES `athletes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
-ALTER TABLE `individual_participations` ADD CONSTRAINT `Relationship27` FOREIGN KEY (`cat_ev_mode_id`) REFERENCES `categories_events_modes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+ALTER TABLE `individual_participations` ADD CONSTRAINT `Relationship27` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
 ALTER TABLE `team_participations` ADD CONSTRAINT `Relationship28` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
-ALTER TABLE `team_participations` ADD CONSTRAINT `Relationship29` FOREIGN KEY (`cat_ev_mode_id`) REFERENCES `categories_events_modes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+ALTER TABLE `team_participations` ADD CONSTRAINT `Relationship29` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
 ALTER TABLE `times` ADD CONSTRAINT `Relationship33` FOREIGN KEY (`individual_participation_id`) REFERENCES `individual_participations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -7908,7 +7923,7 @@ ALTER TABLE `times` ADD CONSTRAINT `Relationship33` FOREIGN KEY (`individual_par
 ALTER TABLE `times` ADD CONSTRAINT `Relationship35` FOREIGN KEY (`team_participation_id`) REFERENCES `team_participations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
-ALTER TABLE `winners` ADD CONSTRAINT `Relationship36` FOREIGN KEY (`id`) REFERENCES `categories_events_modes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+ALTER TABLE `winners` ADD CONSTRAINT `Relationship36` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ;
 
 ALTER TABLE `categories` ADD CONSTRAINT `Relationship37` FOREIGN KEY (`age_id`) REFERENCES `ages` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
@@ -7919,17 +7934,6 @@ ALTER TABLE `categories` ADD CONSTRAINT `Relationship38` FOREIGN KEY (`distance_
 
 ALTER TABLE `teams` ADD CONSTRAINT `Relationship39` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ;
-
-ALTER TABLE `categories_events_modes` ADD CONSTRAINT `events_categories_events_modes` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-;
-
-ALTER TABLE `categories_events_modes` ADD CONSTRAINT `modes_categories_events_modes` FOREIGN KEY (`mode_id`) REFERENCES `modes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-;
-
-ALTER TABLE `categories_events_modes` ADD CONSTRAINT `categories_categories_events_modes` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-;
-
-
 
 
 
