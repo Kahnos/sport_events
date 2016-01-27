@@ -26,18 +26,11 @@ $this->start('tb_actions');
             <td><?= h($event->name) ?></td>
         </tr>
         <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($event->id) ?></td>
-        </tr>
-        <tr>
             <td><?= __('Date') ?></td>
-            <td><?= h($event->date) ?></td>
+            <td><?= h($event->date->format('d-m-Y')) ?></td>
         </tr>
     </table>
 </div>
-
-
-   
 
 <div class="panel panel-default">
     <!-- Panel header -->
@@ -53,29 +46,55 @@ $this->start('tb_actions');
                 <th><?= __('Bronze Id') ?></th>
                 <th><?= __('Mode Id') ?></th>
                 <th><?= __('Category Id') ?></th>
-                <th><?= __('Event Id') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($event->winners as $winners): ?>
                 <tr>
-                    <td><?= h($winners->gold_id) ?></td>
-                    <td><?= h($winners->silver_id) ?></td>
-                    <td><?= h($winners->bronze_id) ?></td>
-                    <td><?= h($winners->mode_id) ?></td>
-                    <td><?= h($winners->category_id) ?></td>
-                    <td><?= h($winners->event_id) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link('', ['controller' => 'Winners', 'action' => 'view', $winners->mode_id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'Winners', 'action' => 'edit', $winners->mode_id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'Winners', 'action' => 'delete', $winners->mode_id], ['confirm' => __('Are you sure you want to delete # {0}?', $winners->mode_id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-                    </td>
+                    <?php
+                        $W_mode = $modes->get($winners->mode_id);
+                        
+                        if($winners->mode_id <= 5){
+                            $gold = $athletes->get($winners->gold_id);
+                            $silver = $athletes->get($winners->silver_id);
+                            $bronze = $athletes->get($winners->bronze_id);
+
+                            $gold_str = $gold->CI . " - " . $gold->name;
+                            $silver_str = $silver->CI . " - " . $silver->name;
+                            $bronze_str = $bronze->CI . " - " . $bronze->name;
+                        }
+                        else{
+                            $gold = $teams->get($winners->gold_id);
+                            $silver = $teams->get($winners->silver_id);
+                            $bronze = $teams->get($winners->bronze_id);
+                            
+                            $gold_str = $gold->name;
+                            $silver_str = $silver->name;
+                            $bronze_str = $bronze->name;
+                        }
+                        
+                    ?>
+                    <td><?= h($gold_str) ?></td>
+                    <td><?= h($silver_str) ?></td>
+                    <td><?= h($bronze_str) ?></td>
+                    <td><?= h($W_mode->type) ?></td>
+                    <?php
+                        $W_category = $categories->get($winners->category_id);
+                        $W_category_distance = $distances->get($W_category->distance_id);
+
+                        if($W_category->age_id != NULL){
+                            $W_category_age = $ages->get($W_category->age_id);
+                            echo "<td>" . h($W_category_distance->name) . " - " . h($W_category_age->name) . "</td>";
+                        }
+                        else{
+                            echo "<td>" . h($W_category_distance->name) . " - " . h($W_category->sex) . "</td>";
+                        }
+                    ?>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">Sin ganadores</p>
+        <p class="panel-body">Sin ganadores relacionados</p>
     <?php endif; ?>
 </div>
