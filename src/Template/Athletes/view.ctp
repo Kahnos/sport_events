@@ -2,6 +2,7 @@
 $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_actions');
 ?>
+
 <li><?= $this->Html->link(__('Edit Athlete'), ['action' => 'edit', $athlete->id]) ?> </li>
 <li><?= $this->Form->postLink(__('Delete Athlete'), ['action' => 'delete', $athlete->id], ['confirm' => __('Are you sure you want to delete # {0}?', $athlete->id)]) ?> </li>
 <li><?= $this->Html->link(__('List Athletes'), ['action' => 'index']) ?> </li>
@@ -122,8 +123,8 @@ $this->start('tb_actions');
 
                         echo "<td>" . h($T_club->name) . "</td>";
 
-                        if($IP_category->age_id != NULL){
-                            $IP_category_age = $ages->get($IP_category->age_id);
+                        if($T_category->age_id != NULL){
+                            $T_category_age = $ages->get($T_category->age_id);
                             echo "<td>" . h($T_category_distance->name) . " - " . h($T_category_age->name) . "</td>";
                         }
                         else{

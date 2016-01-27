@@ -18,9 +18,21 @@ $this->start('tb_actions');
 <fieldset>
     <legend><?= __('Add {0}', ['Team']) ?></legend>
     <?php
+    $catArray = array();
+    foreach ($categories as $category){
+        $category_distance = $distances->get($category->distance_id);
+        if($category->age_id != NULL){
+            $category_age = $ages->get($category->age_id);
+            array_push($catArray, h($category_distance->name) . " - " . h($category_age->name) );
+        }
+        else{
+            array_push($catArray, h($category_distance->name) . " - " . h($category->sex) );
+        }
+    }
+    $catArray = array_combine(range(1, count($catArray)), array_values($catArray));
     echo $this->Form->input('name');
-    echo $this->Form->input('club_id', ['options' => $clubs]);
-    echo $this->Form->input('category_id', ['options' => $categories]);
+    echo $this->Form->input('clubs._ids', ['options' => $clubs]);
+    echo $this->Form->input('category_id', ['options' => $catArray]);
     echo $this->Form->input('athletes._ids', ['options' => $athletes]);
     echo 'LIB </br>';
         

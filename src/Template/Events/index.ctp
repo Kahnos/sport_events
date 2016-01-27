@@ -12,10 +12,11 @@ $this->start('tb_actions');
 <?php $this->end(); ?>
 <?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
 
-<table class="table table-striped" cellpadding="0" cellspacing="0">
+<h2>Events</h2>
+
+   <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('name'); ?></th>
             <th><?= $this->Paginator->sort('date'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
@@ -24,7 +25,6 @@ $this->start('tb_actions');
     <tbody>
         <?php foreach ($events as $event): ?>
         <tr>
-            <td><?= $this->Number->format($event->id) ?></td>
             <td><?= h($event->name) ?></td>
             <td><?= h($event->date->format('d-m-Y')) ?></td>
             <td class="actions">

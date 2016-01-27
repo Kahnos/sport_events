@@ -35,20 +35,20 @@ class AthletesController extends AppController
         $athlete = $this->Athletes->get($id, [
             'contain' => ['Teams', 'IndividualParticipations']
         ]);
-
+        
+        $clubs = $this->loadModel('Clubs');
         $modes = $this->loadModel('Modes');
         $categories = $this->loadModel('Categories');
-        $events = $this->loadModel('Events');
-        $clubs = $this->loadModel('Clubs');
         $distances = $this->loadModel('Distances');
+        $events = $this->loadModel('Events');
         $ages = $this->loadModel('Ages');
 
         $this->set('modes', $modes);
         $this->set('categories', $categories);
-        $this->set('events', $events);
-        $this->set('clubs', $clubs);
         $this->set('distances', $distances);
         $this->set('ages', $ages);
+        $this->set('events', $events);
+        $this->set('clubs', $clubs);
         $this->set('athlete', $athlete);
         $this->set('_serialize', ['athlete']);
     }

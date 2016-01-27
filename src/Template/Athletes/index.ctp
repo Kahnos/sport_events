@@ -10,8 +10,10 @@ $this->start('tb_actions');
 <?php $this->end(); ?>
 <?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
 
+<h2>Atletas</h2>
+
 <table class="table table-striped" cellpadding="0" cellspacing="0">
-    <thead>
+       <thead>
         <tr>
             <th><?= $this->Paginator->sort('CI'); ?></th>
             <th><?= $this->Paginator->sort('name'); ?></th>

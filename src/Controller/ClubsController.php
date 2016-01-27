@@ -34,6 +34,14 @@ class ClubsController extends AppController
         $club = $this->Clubs->get($id, [
             'contain' => ['Teams']
         ]);
+
+        $categories = $this->loadModel('Categories');
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
         $this->set('club', $club);
         $this->set('_serialize', ['club']);
     }

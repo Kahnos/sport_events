@@ -14,10 +14,11 @@ $this->start('tb_actions');
 <?php $this->end(); ?>
 <?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
 
+<h2>Equipos</h2>
+
 <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('name'); ?></th>
             <th><?= $this->Paginator->sort('club_id'); ?></th>
             <th><?= $this->Paginator->sort('category_id'); ?></th>
@@ -27,14 +28,24 @@ $this->start('tb_actions');
     <tbody>
         <?php foreach ($teams as $team): ?>
         <tr>
-            <td><?= $this->Number->format($team->id) ?></td>
             <td><?= h($team->name) ?></td>
             <td>
                 <?= $team->has('club') ? $this->Html->link($team->club->name, ['controller' => 'Clubs', 'action' => 'view', $team->club->id]) : '' ?>
             </td>
-            <td>
-                <?= $team->has('category') ? $this->Html->link($team->category->id, ['controller' => 'Categories', 'action' => 'view', $team->category->id]) : '' ?>
-            </td>
+
+            <?php
+                $T_category = $categories->get($team->category_id);
+                $T_category_distance = $distances->get($T_category->distance_id);
+
+                if($T_category->age_id != NULL){
+                    $T_category_age = $ages->get($T_category->age_id);
+                    echo "<td>" . h($T_category_distance->name) . " - " . h($T_category_age->name) . "</td>";
+                }
+                else{
+                    echo "<td>" . h($T_category_distance->name) . " - " . h($T_category->sex) . "</td>";
+                }
+            ?>
+
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $team->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                 <?= $this->Html->link('', ['action' => 'edit', $team->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>

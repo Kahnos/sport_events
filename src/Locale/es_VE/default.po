@@ -583,7 +583,7 @@ msgstr "Eliminar Atleta"
 
 #: Template/Athletes/view.ctp:31 Template/Teams/view.ctp:97
 msgid "Date Of Birth"
-msgstr "Fecha de Naciminento"
+msgstr "Fecha de Nacimiento"
 
 #: Template/Athletes/view.ctp:44 Template/Categories/view.ctp:52
 #: Template/Events/view.ctp:42 Template/Modes/view.ctp:44
