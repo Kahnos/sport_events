@@ -2,6 +2,7 @@
 $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_actions');
 ?>
+
     <li><?= $this->Html->link(__('List Teams'), ['action' => 'index']) ?></li>
     <li><?= $this->Html->link(__('List Clubs'), ['controller' => 'Clubs', 'action' => 'index']) ?> </li>
     <li><?= $this->Html->link(__('New Club'), ['controller' => 'Clubs', 'action' => 'add']) ?> </li>
@@ -21,6 +22,26 @@ $this->start('tb_actions');
     echo $this->Form->input('club_id', ['options' => $clubs]);
     echo $this->Form->input('category_id', ['options' => $categories]);
     echo $this->Form->input('athletes._ids', ['options' => $athletes]);
+    echo 'LIB </br>';
+        
+    /*$options = array('M' => 'Male', 'F' => 'Female');
+    $attributes = array('legend' => false);
+    echo $this->Form->radio('gender', $options, $attributes);*/
+        
+    echo '<strong>Tipo de categoría </br></strong>';
+    
+    echo $this->Form->radio(
+    'category_type',
+    [
+        ['value' => 'S', 'text' => 'Sexo'],
+        ['value' => 'E', 'text' => 'Edad'],
+    ]
+    );
+    
+    if ($this->request['category_type']=='S'){
+        echo 'Libny';
+    }     
+        
     ?>
 </fieldset>
 <?= $this->Form->button(__("Add")); ?>
