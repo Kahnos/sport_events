@@ -20,7 +20,13 @@ $this->start('tb_actions');
 <div class="panel panel-default">
     <!-- Panel header -->
     <div class="panel-heading">
-        <h3 class="panel-title"><?= h($team->name) ?></h3>
+        <h3
+           class="panel-title"><?= h($team->name) ?>
+            <td class="actions">
+                <?= $this->Html->link('', ['action' => 'edit', $team->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+                <?= $this->Form->postLink('', ['action' => 'delete', $team->id], ['confirm' => __('Are you sure you want to delete # {0}?', $team->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
+            </td>
+        </h3>
     </div>
     <table class="table table-striped" cellpadding="0" cellspacing="0">
         <tr>
@@ -33,11 +39,18 @@ $this->start('tb_actions');
         </tr>
         <tr>
             <td><?= __('Category') ?></td>
-            <td><?= $team->has('category') ? $this->Html->link($team->category->id, ['controller' => 'Categories', 'action' => 'view', $team->category->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($team->id) ?></td>
+            <?php
+                $T_category = $categories->get($team->category_id);
+                $T_category_distance = $distances->get($T_category->distance_id);
+
+                if($T_category->age_id != NULL){
+                    $T_category_age = $ages->get($T_category->age_id);
+                    echo "<td>" . h($T_category_distance->name) . " - " . h($T_category_age->name) . "</td>";
+                }
+                else{
+                    echo "<td>" . h($T_category_distance->name) . " - " . h($T_category->sex) . "</td>";
+                }
+            ?>
         </tr>
     </table>
 </div>
@@ -52,34 +65,47 @@ $this->start('tb_actions');
             <thead>
             <tr>
                 <th><?= __('Position') ?></th>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Team Id') ?></th>
                 <th><?= __('Mode Id') ?></th>
                 <th><?= __('Category Id') ?></th>
                 <th><?= __('Event Id') ?></th>
+                <th><?= __('Fecha') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($team->team_participations as $teamParticipations): ?>
                 <tr>
+                    <?php
+                        $TP_mode = $modes->get($teamParticipations->mode_id);
+                        $TP_event = $events->get($teamParticipations->event_id);
+                    ?>
+
                     <td><?= h($teamParticipations->position) ?></td>
-                    <td><?= h($teamParticipations->id) ?></td>
-                    <td><?= h($teamParticipations->team_id) ?></td>
-                    <td><?= h($teamParticipations->mode_id) ?></td>
-                    <td><?= h($teamParticipations->category_id) ?></td>
-                    <td><?= h($teamParticipations->event_id) ?></td>
+                    <td><?= h($TP_mode->type) ?></td>
+                    <?php
+                        $TP_category = $categories->get($teamParticipations->category_id);
+                        $TP_category_distance = $distances->get($TP_category->distance_id);
+
+                        if($TP_category->age_id != NULL){
+                            $TP_category_age = $ages->get($TP_category->age_id);
+                            echo "<td>" . h($TP_category_distance->name) . " - " . h($TP_category_age->name) . "</td>";
+                        }
+                        else{
+                            echo "<td>" . h($TP_category_distance->name) . " - " . h($TP_category->sex) . "</td>";
+                        }
+                    ?>
+                    <td><?= h($TP_event->name) ?></td>
+                    <td><?= h($TP_event->date->format('d-m-Y')) ?></td>
+
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'TeamParticipations', 'action' => 'view', $teamParticipations->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'TeamParticipations', 'action' => 'edit', $teamParticipations->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'TeamParticipations', 'action' => 'delete', $teamParticipations->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teamParticipations->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">no related TeamParticipations</p>
+        <p class="panel-body">Sin participaciones</p>
     <?php endif; ?>
 </div>
 <div class="panel panel-default">
@@ -91,32 +117,29 @@ $this->start('tb_actions');
         <table class="table table-striped">
             <thead>
             <tr>
-                <th><?= __('Id') ?></th>
+                <th><?= __('CI') ?></th>
                 <th><?= __('Name') ?></th>
                 <th><?= __('Sex') ?></th>
                 <th><?= __('Date Of Birth') ?></th>
-                <th><?= __('CI') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($team->athletes as $athletes): ?>
                 <tr>
-                    <td><?= h($athletes->id) ?></td>
+                    <td><?= h($athletes->CI) ?></td>
                     <td><?= h($athletes->name) ?></td>
                     <td><?= h($athletes->sex) ?></td>
-                    <td><?= h($athletes->date_of_birth) ?></td>
-                    <td><?= h($athletes->CI) ?></td>
+                    <td><?= h($athletes->date_of_birth->format('d-m-Y')) ?></td>
+
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'Athletes', 'action' => 'view', $athletes->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'Athletes', 'action' => 'edit', $athletes->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'Athletes', 'action' => 'delete', $athletes->id], ['confirm' => __('Are you sure you want to delete # {0}?', $athletes->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">no related Athletes</p>
+        <p class="panel-body">Sin atletas</p>
     <?php endif; ?>
 </div>

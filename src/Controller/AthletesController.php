@@ -38,17 +38,17 @@ class AthletesController extends AppController
 
         $modes = $this->loadModel('Modes');
         $categories = $this->loadModel('Categories');
-        $events = $this->loadModel('Events');
-        $clubs = $this->loadModel('Clubs');
         $distances = $this->loadModel('Distances');
         $ages = $this->loadModel('Ages');
+        $events = $this->loadModel('Events');
+        $clubs = $this->loadModel('Clubs');
 
         $this->set('modes', $modes);
         $this->set('categories', $categories);
-        $this->set('events', $events);
-        $this->set('clubs', $clubs);
         $this->set('distances', $distances);
         $this->set('ages', $ages);
+        $this->set('events', $events);
+        $this->set('clubs', $clubs);
         $this->set('athlete', $athlete);
         $this->set('_serialize', ['athlete']);
     }

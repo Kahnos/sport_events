@@ -21,6 +21,14 @@ class TeamsController extends AppController
         $this->paginate = [
             'contain' => ['Clubs', 'Categories']
         ];
+
+        $categories = $this->loadModel('Categories');
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
         $this->set('teams', $this->paginate($this->Teams));
         $this->set('_serialize', ['teams']);
     }
@@ -37,6 +45,18 @@ class TeamsController extends AppController
         $team = $this->Teams->get($id, [
             'contain' => ['Clubs', 'Categories', 'Athletes', 'TeamParticipations']
         ]);
+
+        $modes = $this->loadModel('Modes');
+        $categories = $this->loadModel('Categories');
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $events = $this->loadModel('Events');
+
+        $this->set('modes', $modes);
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+        $this->set('events', $events);
         $this->set('team', $team);
         $this->set('_serialize', ['team']);
     }
@@ -58,11 +78,22 @@ class TeamsController extends AppController
                 $this->Flash->error(__('The team could not be saved. Please, try again.'));
             }
         }
+
+        $categoriesTable = $this->loadModel('Categories');
+        $categories = $categoriesTable -> find();
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+
         $clubs = $this->Teams->Clubs->find('list', ['limit' => 200]);
-        $categories = $this->Teams->Categories->find('list', ['limit' => 200]);
+        //$categories = $this->Teams->Categories->find('list', ['limit' => 200]);
         $athletes = $this->Teams->Athletes->find('list', ['limit' => 200]);
-        $this->set(compact('team', 'clubs', 'categories', 'athletes'));
+        //($this->set(compact('team', 'clubs', 'categories', 'athletes'));
+        $this->set(compact('team', 'clubs', 'athletes'));
         $this->set('_serialize', ['team']);
+
     }
 
     /**
@@ -86,10 +117,20 @@ class TeamsController extends AppController
                 $this->Flash->error(__('The team could not be saved. Please, try again.'));
             }
         }
+
+        $categoriesTable = $this->loadModel('Categories');
+        $categories = $categoriesTable -> find();
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+
         $clubs = $this->Teams->Clubs->find('list', ['limit' => 200]);
-        $categories = $this->Teams->Categories->find('list', ['limit' => 200]);
+        //$categories = $this->Teams->Categories->find('list', ['limit' => 200]);
         $athletes = $this->Teams->Athletes->find('list', ['limit' => 200]);
-        $this->set(compact('team', 'clubs', 'categories', 'athletes'));
+        //$this->set(compact('team', 'clubs', 'categories', 'athletes'));
+        $this->set(compact('team', 'clubs', 'athletes'));
         $this->set('_serialize', ['team']);
     }
 
