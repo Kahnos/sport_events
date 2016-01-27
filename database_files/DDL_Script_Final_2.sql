@@ -7723,15 +7723,15 @@ CREATE TABLE `individual_participations` (
 
 /*Data for the table `individual_participations` */
 
-insert  into `individual_participations`(`position`,`id`,`athlete_id`,`cat_ev_mode_id`) values 
+insert  into `individual_participations`(`position`,`id`,`athlete_id`,`mode_id`,`category_id`,`event_id`) values 
 
-(2,1,8,30),
+(2,1,8,1,8,2),
 
-(3,2,5,30),
+(3,2,5,1,8,2),
 
-(1,3,9,30),
+(1,3,9,1,8,2),
 
-(NULL,4,4,29);
+(NULL,4,4,1,8,1);
 
 /*Table structure for table `modes` */
 
@@ -7783,13 +7783,13 @@ CREATE TABLE `team_participations` (
 
 /*Data for the table `team_participations` */
 
-insert  into `team_participations`(`position`,`id`,`team_id`,`cat_ev_mode_id`) values 
+insert  into `team_participations`(`position`,`id`,`team_id`,`mode_id`,`category_id`,`event_id`) values 
 
-(NULL,1,1,2209),
+(NULL,1,1,7,13,1),
 
-(NULL,2,2,2209),
+(NULL,2,2,7,13,1),
 
-(NULL,6,2,2182);
+(NULL,6,2,7,6,2);
 
 /*Table structure for table `teams` */
 
@@ -7868,9 +7868,9 @@ ALTER TABLE `winners` ADD  PRIMARY KEY (`id`)
 ;
 /*Data for the table `winners` */
 
-insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`id`) values 
+insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`) values 
 
-(1,2,3,1);
+(1,2,3,1,8,2);
 
 
 -- Create relationships section ------------------------------------------------- 
