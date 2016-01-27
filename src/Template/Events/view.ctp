@@ -36,86 +36,9 @@ $this->start('tb_actions');
     </table>
 </div>
 
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= __('Related IndividualParticipations') ?></h3>
-    </div>
-    <?php if (!empty($event->individual_participations)): ?>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><?= __('Position') ?></th>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Athlete Id') ?></th>
-                <th><?= __('Mode Id') ?></th>
-                <th><?= __('Category Id') ?></th>
-                <th><?= __('Event Id') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($event->individual_participations as $individualParticipations): ?>
-                <tr>
-                    <td><?= h($individualParticipations->position) ?></td>
-                    <td><?= h($individualParticipations->id) ?></td>
-                    <td><?= h($individualParticipations->athlete_id) ?></td>
-                    <td><?= h($individualParticipations->mode_id) ?></td>
-                    <td><?= h($individualParticipations->category_id) ?></td>
-                    <td><?= h($individualParticipations->event_id) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link('', ['controller' => 'IndividualParticipations', 'action' => 'view', $individualParticipations->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'IndividualParticipations', 'action' => 'edit', $individualParticipations->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'IndividualParticipations', 'action' => 'delete', $individualParticipations->id], ['confirm' => __('Are you sure you want to delete # {0}?', $individualParticipations->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p class="panel-body">no related IndividualParticipations</p>
-    <?php endif; ?>
-</div>
-<div class="panel panel-default">
-    <!-- Panel header -->
-    <div class="panel-heading">
-        <h3 class="panel-title"><?= __('Related TeamParticipations') ?></h3>
-    </div>
-    <?php if (!empty($event->team_participations)): ?>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><?= __('Position') ?></th>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Team Id') ?></th>
-                <th><?= __('Mode Id') ?></th>
-                <th><?= __('Category Id') ?></th>
-                <th><?= __('Event Id') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($event->team_participations as $teamParticipations): ?>
-                <tr>
-                    <td><?= h($teamParticipations->position) ?></td>
-                    <td><?= h($teamParticipations->id) ?></td>
-                    <td><?= h($teamParticipations->team_id) ?></td>
-                    <td><?= h($teamParticipations->mode_id) ?></td>
-                    <td><?= h($teamParticipations->category_id) ?></td>
-                    <td><?= h($teamParticipations->event_id) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link('', ['controller' => 'TeamParticipations', 'action' => 'view', $teamParticipations->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'TeamParticipations', 'action' => 'edit', $teamParticipations->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'TeamParticipations', 'action' => 'delete', $teamParticipations->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teamParticipations->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p class="panel-body">no related TeamParticipations</p>
-    <?php endif; ?>
-</div>
+
+   
+
 <div class="panel panel-default">
     <!-- Panel header -->
     <div class="panel-heading">
@@ -153,6 +76,6 @@ $this->start('tb_actions');
             </tbody>
         </table>
     <?php else: ?>
-        <p class="panel-body">no related Winners</p>
+        <p class="panel-body">Sin ganadores</p>
     <?php endif; ?>
 </div>
