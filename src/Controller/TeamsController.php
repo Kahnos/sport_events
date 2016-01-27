@@ -47,15 +47,15 @@ class TeamsController extends AppController
         ]);
 
         $modes = $this->loadModel('Modes');
+        $events = $this->loadModel('Events');
         $categories = $this->loadModel('Categories');
         $distances = $this->loadModel('Distances');
         $ages = $this->loadModel('Ages');
-        $events = $this->loadModel('Events');
 
-        $this->set('modes', $modes);
         $this->set('categories', $categories);
         $this->set('distances', $distances);
         $this->set('ages', $ages);
+        $this->set('modes', $modes);
         $this->set('events', $events);
         $this->set('team', $team);
         $this->set('_serialize', ['team']);

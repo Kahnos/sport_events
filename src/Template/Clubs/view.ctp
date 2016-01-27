@@ -21,10 +21,6 @@ $this->start('tb_actions');
             <td><?= __('Name') ?></td>
             <td><?= h($club->name) ?></td>
         </tr>
-        <tr>
-            <td><?= __('Id') ?></td>
-            <td><?= $this->Number->format($club->id) ?></td>
-        </tr>
     </table>
 </div>
 
@@ -37,9 +33,7 @@ $this->start('tb_actions');
         <table class="table table-striped">
             <thead>
             <tr>
-                <th><?= __('Id') ?></th>
                 <th><?= __('Name') ?></th>
-                <th><?= __('Club Id') ?></th>
                 <th><?= __('Category Id') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -47,14 +41,21 @@ $this->start('tb_actions');
             <tbody>
             <?php foreach ($club->teams as $teams): ?>
                 <tr>
-                    <td><?= h($teams->id) ?></td>
                     <td><?= h($teams->name) ?></td>
-                    <td><?= h($teams->club_id) ?></td>
-                    <td><?= h($teams->category_id) ?></td>
+                    <?php
+                        $T_category = $categories->get($teams->category_id);
+                        $T_category_distance = $distances->get($T_category->distance_id);
+
+                        if($T_category->age_id != NULL){
+                            $T_category_age = $ages->get($T_category->age_id);
+                            echo "<td>" . h($T_category_distance->name) . " - " . h($T_category_age->name) . "</td>";
+                        }
+                        else{
+                            echo "<td>" . h($T_category_distance->name) . " - " . h($T_category->sex) . "</td>";
+                        }
+                    ?>
                     <td class="actions">
                         <?= $this->Html->link('', ['controller' => 'Teams', 'action' => 'view', $teams->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                        <?= $this->Html->link('', ['controller' => 'Teams', 'action' => 'edit', $teams->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                        <?= $this->Form->postLink('', ['controller' => 'Teams', 'action' => 'delete', $teams->id], ['confirm' => __('Are you sure you want to delete # {0}?', $teams->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
