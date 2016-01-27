@@ -17,7 +17,6 @@ $this->start('tb_actions');
 <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('type'); ?></th>
             <th><?= $this->Paginator->sort('number_of_disciplines'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
@@ -26,7 +25,6 @@ $this->start('tb_actions');
     <tbody>
         <?php foreach ($modes as $mode): ?>
         <tr>
-            <td><?= $this->Number->format($mode->id) ?></td>
             <td><?= h($mode->type) ?></td>
             <td><?= $this->Number->format($mode->number_of_disciplines) ?></td>
             <td class="actions">

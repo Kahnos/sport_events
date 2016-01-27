@@ -17,7 +17,6 @@ $this->start('tb_actions');
             <th><?= $this->Paginator->sort('time_2'); ?></th>
             <th><?= $this->Paginator->sort('time_3'); ?></th>
             <th><?= $this->Paginator->sort('time_4'); ?></th>
-            <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('individual_participation_id'); ?></th>
             <th><?= $this->Paginator->sort('team_participation_id'); ?></th>
             <th class="actions"><?= __('Actions'); ?></th>
@@ -26,16 +25,53 @@ $this->start('tb_actions');
     <tbody>
         <?php foreach ($times as $time): ?>
         <tr>
-            <td><?= h($time->time_1) ?></td>
-            <td><?= h($time->time_2) ?></td>
-            <td><?= h($time->time_3) ?></td>
-            <td><?= h($time->time_4) ?></td>
-            <td><?= $this->Number->format($time->id) ?></td>
+            
+            <?php if (isset($time->time_3)){ ?>
+                <td><?= h(date_format(($time->time_1),'H:i:s')) ?></td>
+            <?php } else{ ?>
+                <td><?= h($time->time_1) ?></td>
+            <?php } ?>
+            
+            <?php if (isset($time->time_2)){ ?>
+                <td><?= h(date_format(($time->time_2),'H:i:s')) ?></td>
+            <?php } else{ ?>
+                <td><?= h($time->time_2) ?></td>
+            <?php } ?>
+            
+            <?php if (isset($time->time_3)){ ?>
+                <td> <?= h(date_format(($time->time_3),'H:i:s')) ?></td>
+            <?php } else{ ?>
+                <td><?= h($time->time_3) ?></td>
+            <?php } ?>
+            
+            <?php if (isset($time->time_4)){?>
+                <td> <?= h(date_format(($time->time_4),'H:i:s')) ?></td>
+            <?php } else{ ?>
+                <td><?= h($time->time_4) ?></td>
+           <?php } ?>
+            
+            <?php 
+                //Cedula y nombre de las participaciones individuales
+                if ($time->has('individual_participation')){
+                    $athlete = $athletes->get($time->individual_participation_id);
+                    $athlete_str = $athlete->CI . ' - ' . $athlete->name;
+                }
+                else $athlete_str='';
+            
+                //Nombre e identificador de las participaciones en equipo
+                if ($time->has('team_participation')){
+                    $team = $teams->get($time->team_participation_id);
+                    $team_str = $team->name;
+                }
+                else $team_str='';
+                
+            ?>
             <td>
-                <?= $time->has('individual_participation') ? $this->Html->link($time->individual_participation->id, ['controller' => 'IndividualParticipations', 'action' => 'view', $time->individual_participation->id]) : '' ?>
+                <?= $time->has('individual_participation') ? $this->Html->link($athlete_str, ['controller' => 'IndividualParticipations', 'action' => 'view', $time->individual_participation->id]) : '' ?>
             </td>
+            
             <td>
-                <?= $time->has('team_participation') ? $this->Html->link($time->team_participation->id, ['controller' => 'TeamParticipations', 'action' => 'view', $time->team_participation->id]) : '' ?>
+                <?= $time->has('team_participation') ? $this->Html->link($team_str, ['controller' => 'TeamParticipations', 'action' => 'view', $time->team_participation->id]) : '' ?>
             </td>
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $time->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
