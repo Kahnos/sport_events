@@ -2,6 +2,7 @@
 $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_actions');
 ?>
+
 <li><?= $this->Html->link(__('Edit Athlete'), ['action' => 'edit', $athlete->id]) ?> </li>
 <li><?= $this->Form->postLink(__('Delete Athlete'), ['action' => 'delete', $athlete->id], ['confirm' => __('Are you sure you want to delete # {0}?', $athlete->id)]) ?> </li>
 <li><?= $this->Html->link(__('List Athletes'), ['action' => 'index']) ?> </li>

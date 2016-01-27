@@ -13,10 +13,16 @@ $this->start('tb_actions');
 <fieldset>
     <legend><?= __('Add {0}', ['Athlete']) ?></legend>
     <?php
-    echo $this->Form->input('name');
-    echo $this->Form->input('sex');
-    echo $this->Form->input('date_of_birth');
     echo $this->Form->input('CI');
+    echo $this->Form->input('name');
+    echo $this->Form->radio(
+        'sex',
+        [
+            ['value' => 'M', 'text' => 'Masculino'],
+            ['value' => 'F', 'text' => 'Femenino']
+        ]
+    );
+    echo $this->Form->input('date_of_birth', ['minYear' => 1950 , 'maxYear' => 2010]);
     echo $this->Form->input('teams._ids', ['options' => $teams]);
     ?>
 </fieldset>
