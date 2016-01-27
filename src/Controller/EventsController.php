@@ -34,6 +34,22 @@ class EventsController extends AppController
         $event = $this->Events->get($id, [
             'contain' => ['IndividualParticipations', 'TeamParticipations', 'Winners']
         ]);
+        
+        $modes = $this->loadModel('Modes');
+        $categories = $this->loadModel('Categories');
+        $distances = $this->loadModel('Distances');
+        $events = $this->loadModel('Events');
+        $ages = $this->loadModel('Ages');
+        $teams = $this->loadModel('Teams');
+        $athletes = $this->loadModel('Athletes');
+
+        $this->set('teams', $teams);
+        $this->set('athletes', $athletes); 
+        $this->set('modes', $modes);
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+        $this->set('events', $events);
         $this->set('event', $event);
         $this->set('_serialize', ['event']);
     }

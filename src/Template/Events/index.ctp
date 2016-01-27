@@ -12,7 +12,9 @@ $this->start('tb_actions');
 <?php $this->end(); ?>
 <?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
 
-<table class="table table-striped" cellpadding="0" cellspacing="0">
+<h2>Events</h2>
+
+   <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
             <th><?= $this->Paginator->sort('name'); ?></th>
