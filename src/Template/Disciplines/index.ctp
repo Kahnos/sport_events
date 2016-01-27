@@ -9,25 +9,18 @@ $this->start('tb_actions');
 <?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
 
 <table class="table table-striped" cellpadding="0" cellspacing="0">
+    <h2>Disciplinas</h2>
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id'); ?></th>
             <th><?= $this->Paginator->sort('type'); ?></th>
             <th><?= $this->Paginator->sort('sub_type'); ?></th>
-            <th class="actions"><?= __('Actions'); ?></th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($disciplines as $discipline): ?>
         <tr>
-            <td><?= $this->Number->format($discipline->id) ?></td>
             <td><?= h($discipline->type) ?></td>
             <td><?= h($discipline->sub_type) ?></td>
-            <td class="actions">
-                <?= $this->Html->link('', ['action' => 'view', $discipline->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-                <?= $this->Html->link('', ['action' => 'edit', $discipline->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-                <?= $this->Form->postLink('', ['action' => 'delete', $discipline->id], ['confirm' => __('Are you sure you want to delete # {0}?', $discipline->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-            </td>
         </tr>
         <?php endforeach; ?>
     </tbody>
