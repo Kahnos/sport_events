@@ -28,8 +28,8 @@ class CategoriesEventsMode extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'mode_id' => false,
-        'category_id' => false,
-        'event_id' => false,
+        'mode_id' => true,
+        'category_id' => true,
+        'event_id' => true,
     ];
 }

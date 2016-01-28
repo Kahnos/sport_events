@@ -26,7 +26,7 @@ class DisciplinesTable extends Table
         parent::initialize($config);
 
         $this->table('disciplines');
-        $this->displayField('id');
+        $this->displayField('sub_type');
         $this->primaryKey('id');
 
         $this->belongsToMany('Modes', [

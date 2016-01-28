@@ -15,6 +15,9 @@ $this->start('tb_actions');
 <fieldset>
     <legend><?= __('Add {0}', ['Categories Events Mode']) ?></legend>
     <?php
+    echo $this->Form->input('event_id', ['type' => 'select']);
+    echo $this->Form->input('mode_id', ['type' => 'select']);
+    echo $this->Form->input('category_id', ['type' => 'select']);
     echo $this->Form->input('hour');
     ?>
 </fieldset>

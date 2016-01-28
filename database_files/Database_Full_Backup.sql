@@ -26,7 +26,7 @@ CREATE TABLE `ages` (
   `max_age` tinyint(3) unsigned NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `ages` */
 
@@ -51,7 +51,7 @@ CREATE TABLE `athletes`
   `date_of_birth` Date NOT NULL,
   `CI` Int UNSIGNED NOT NULL,
   PRIMARY KEY (`id`)
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 
 ALTER TABLE `athletes` ADD UNIQUE `CI` (`CI`)
@@ -78,10 +78,9 @@ CREATE TABLE `athletes_teams` (
   `athlete_id` int(10) unsigned NOT NULL,
   `team_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`athlete_id`,`team_id`),
-  KEY `Relationship25` (`team_id`),
   CONSTRAINT `Relationship24` FOREIGN KEY (`athlete_id`) REFERENCES `athletes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Relationship25` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `athletes_teams` */
 
@@ -101,11 +100,9 @@ CREATE TABLE `categories` (
   `age_id` int(10) unsigned DEFAULT NULL,
   `distance_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IX_Relationship37` (`age_id`),
-  KEY `IX_Relationship38` (`distance_id`),
   CONSTRAINT `Relationship37` FOREIGN KEY (`age_id`) REFERENCES `ages` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `Relationship38` FOREIGN KEY (`distance_id`) REFERENCES `distances` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `categories` */
 
@@ -211,12 +208,10 @@ CREATE TABLE `categories_events_modes` (
   `event_id` int(10) unsigned NOT NULL,
   `hour` time NOT NULL,
   PRIMARY KEY (`mode_id`,`category_id`,`event_id`),
-  KEY `Posee` (`category_id`),
-  KEY `Evento_Modalidad_Categoria` (`event_id`),
-  CONSTRAINT `Evento_Modalidad_Categoria` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `Posee` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON UPDATE CASCADE,
-  CONSTRAINT `Tiene` FOREIGN KEY (`mode_id`) REFERENCES `modes` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `EventFK` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `CategoryFK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ModeFK` FOREIGN KEY (`mode_id`) REFERENCES `modes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 /*Data for the table `categories_events_modes` */
 
@@ -234,7 +229,7 @@ CREATE TABLE `clubs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `clubs` */
 
@@ -253,7 +248,7 @@ CREATE TABLE `disciplines` (
   `type` enum('Atletismo','Ciclismo','Natación') NOT NULL,
   `sub_type` enum('Carrera','Caminata','De ruta','Asfalto','Montaña','Piscina','Aguas abiertas') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `disciplines` */
 
@@ -274,10 +269,9 @@ CREATE TABLE `disciplines_modes` (
   `discipline_id` int(10) unsigned NOT NULL,
   `mode_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`discipline_id`,`mode_id`),
-  KEY `Relationship15` (`mode_id`),
   CONSTRAINT `Relationship14` FOREIGN KEY (`discipline_id`) REFERENCES `disciplines` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `Relationship15` FOREIGN KEY (`mode_id`) REFERENCES `modes` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `disciplines_modes` */
 
@@ -321,7 +315,7 @@ CREATE TABLE `distances` (
   `distance_4` mediumint(9) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `distances` */
 
@@ -346,7 +340,7 @@ CREATE TABLE `events` (
   `name` varchar(100) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `events` */
 
@@ -370,11 +364,9 @@ CREATE TABLE `individual_participations` (
   `event_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `composed_unique_2` (`event_id`,`athlete_id`,`mode_id`,`category_id`),
-  KEY `IX_Relationship26` (`athlete_id`),
-  KEY `IX_Relationship27` (`mode_id`,`category_id`,`event_id`),
   CONSTRAINT `Relationship26` FOREIGN KEY (`athlete_id`) REFERENCES `athletes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Relationship27` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `individual_participations` */
 
@@ -393,7 +385,7 @@ CREATE TABLE `modes` (
   `type` varchar(20) NOT NULL,
   `number_of_disciplines` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `modes` */
 
@@ -422,11 +414,9 @@ CREATE TABLE `team_participations` (
   `event_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `composed_unique_1` (`event_id`,`team_id`,`mode_id`,`category_id`),
-  KEY `IX_Relationship28` (`team_id`),
-  KEY `IX_Relationship29` (`mode_id`,`category_id`,`event_id`),
   CONSTRAINT `Relationship28` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Relationship29` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `team_participations` */
 
@@ -445,11 +435,9 @@ CREATE TABLE `teams` (
   `club_id` int(10) unsigned DEFAULT NULL,
   `category_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `IX_Relationship17` (`club_id`),
-  KEY `IX_Relationship39` (`category_id`),
   CONSTRAINT `Relationship17` FOREIGN KEY (`club_id`) REFERENCES `clubs` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `Relationship39` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `teams` */
 
@@ -473,11 +461,9 @@ CREATE TABLE `times` (
   `team_participation_id` int(10) unsigned DEFAULT NULL,
   `time_total` time DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `IX_Relationship33` (`individual_participation_id`),
-  KEY `IX_Relationship35` (`team_participation_id`),
   CONSTRAINT `Relationship33` FOREIGN KEY (`individual_participation_id`) REFERENCES `individual_participations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Relationship35` FOREIGN KEY (`team_participation_id`) REFERENCES `team_participations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+);
 
 /*Data for the table `times` */
 
@@ -501,7 +487,7 @@ CREATE TABLE `winners` (
   `category_id` Int UNSIGNED NOT NULL,
   `event_id` Int UNSIGNED NOT NULL,
   CONSTRAINT `Relationship40` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+);
 
 ALTER TABLE `winners` ADD  PRIMARY KEY (`mode_id`,`category_id`,`event_id`)
 ;

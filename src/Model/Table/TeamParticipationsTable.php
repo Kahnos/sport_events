@@ -30,7 +30,7 @@ class TeamParticipationsTable extends Table
         parent::initialize($config);
 
         $this->table('team_participations');
-        $this->displayField('id');
+        $this->displayField('team_id');
         $this->primaryKey('id');
 
         $this->belongsTo('Teams', [

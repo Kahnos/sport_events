@@ -29,7 +29,7 @@ class ModesTable extends Table
         parent::initialize($config);
 
         $this->table('modes');
-        $this->displayField('id');
+        $this->displayField('type');
         $this->primaryKey('id');
 
         $this->hasMany('IndividualParticipations', [
