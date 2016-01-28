@@ -21,6 +21,7 @@ class CategoriesEventsModesController extends AppController
         $this->paginate = [
             'contain' => ['Modes', 'Categories', 'Events']
         ];
+    
         $this->set('categoriesEventsModes', $this->paginate($this->CategoriesEventsModes));
         $this->set('_serialize', ['categoriesEventsModes']);
     }
@@ -37,6 +38,7 @@ class CategoriesEventsModesController extends AppController
         $categoriesEventsMode = $this->CategoriesEventsModes->get($id, [
             'contain' => ['Modes', 'Categories', 'Events']
         ]);
+        
         $this->set('categoriesEventsMode', $categoriesEventsMode);
         $this->set('_serialize', ['categoriesEventsMode']);
     }
@@ -58,8 +60,17 @@ class CategoriesEventsModesController extends AppController
                 $this->Flash->error(__('The categories events mode could not be saved. Please, try again.'));
             }
         }
+        
+        $categoriesTable = $this->loadModel('Categories');
+        $categories = $categoriesTable -> find();
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+        
         $modes = $this->CategoriesEventsModes->Modes->find('list', ['limit' => 200]);
-        $categories = $this->CategoriesEventsModes->Categories->find('list', ['limit' => 200]);
+        //$categories = $this->CategoriesEventsModes->Categories->find('list', ['limit' => 200]);
         $events = $this->CategoriesEventsModes->Events->find('list', ['limit' => 200]);
         $this->set(compact('categoriesEventsMode', 'modes', 'categories', 'events'));
         $this->set('_serialize', ['categoriesEventsMode']);
