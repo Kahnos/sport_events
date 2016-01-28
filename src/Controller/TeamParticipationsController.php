@@ -58,11 +58,20 @@ class TeamParticipationsController extends AppController
                 $this->Flash->error(__('The team participation could not be saved. Please, try again.'));
             }
         }
+        
+        $categoriesTable = $this->loadModel('Categories');
+        $categories = $categoriesTable -> find();
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+        
         $teams = $this->TeamParticipations->Teams->find('list', ['limit' => 200]);
         $modes = $this->TeamParticipations->Modes->find('list', ['limit' => 200]);
-        $categories = $this->TeamParticipations->Categories->find('list', ['limit' => 200]);
+        //$categories = $this->TeamParticipations->Categories->find('list', ['limit' => 200]);
         $events = $this->TeamParticipations->Events->find('list', ['limit' => 200]);
-        $this->set(compact('teamParticipation', 'teams', 'modes', 'categories', 'events'));
+        $this->set(compact('teamParticipation', 'teams', 'modes', 'events'));
         $this->set('_serialize', ['teamParticipation']);
     }
 
@@ -87,9 +96,17 @@ class TeamParticipationsController extends AppController
                 $this->Flash->error(__('The team participation could not be saved. Please, try again.'));
             }
         }
+        $categoriesTable = $this->loadModel('Categories');
+        $categories = $categoriesTable -> find();
+        $distances = $this->loadModel('Distances');
+        $ages = $this->loadModel('Ages');
+        $this->set('categories', $categories);
+        $this->set('distances', $distances);
+        $this->set('ages', $ages);
+        
         $teams = $this->TeamParticipations->Teams->find('list', ['limit' => 200]);
         $modes = $this->TeamParticipations->Modes->find('list', ['limit' => 200]);
-        $categories = $this->TeamParticipations->Categories->find('list', ['limit' => 200]);
+        //$categories = $this->TeamParticipations->Categories->find('list', ['limit' => 200]);
         $events = $this->TeamParticipations->Events->find('list', ['limit' => 200]);
         $this->set(compact('teamParticipation', 'teams', 'modes', 'categories', 'events'));
         $this->set('_serialize', ['teamParticipation']);
