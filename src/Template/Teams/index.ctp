@@ -16,6 +16,35 @@ $this->start('tb_actions');
 
 <h2>Equipos</h2>
 
+</br>
+</br>
+<?php
+    //$catArray = array(range(1, 90));
+    $catArray = array();
+    foreach ($categoriesSearch as $category){
+        $category_distance = $distances->get($category->distance_id);
+        if($category->age_id != NULL){
+            $category_age = $ages->get($category->age_id);
+            array_push($catArray, h($category_distance->name) . " - " . h($category_age->name) );
+        }
+        else{
+            array_push($catArray, h($category_distance->name) . " - " . h($category->sex) );
+        }
+    }           
+    $catArray = array_combine(range(1, count($catArray)), array_values($catArray));
+
+    echo $this->Form->create($teams);
+
+    echo $this->Form->input('name', ['label' => 'Nombre del equipo:', 'required' => false]);
+    echo $this->Form->input('category_id', ['label' => 'Categoría:', 'required' => false, 'options' => $catArray, 'empty' => 'Todas']);
+
+    echo $this->Form->submit('Buscar');
+
+    $this->Form->end();
+?>
+</br>
+</br>
+
 <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>

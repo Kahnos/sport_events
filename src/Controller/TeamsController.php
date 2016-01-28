@@ -21,15 +21,42 @@ class TeamsController extends AppController
         $this->paginate = [
             'contain' => ['Clubs', 'Categories']
         ];
-
+    
+        if ((isset($this->request->data['name']) && $this->request->data['name']!="") && 
+            (isset($this->request->data['category_id']) && $this->request->data['category_id']!="")
+          ){
+            $auxName = $this->request->data['name'];
+            $auxCat = $this->request->data['category_id'];
+            //$query = $this->Teams->find('all')->where(['name' => $aux]);
+            $query = $this->Teams->findAllByNameAndCategory_id($auxName, $auxCat);
+        }
+        elseif (isset($this->request->data['name']) && $this->request->data['name']!=""){
+            $aux = $this->request->data['name'];
+            $query = $this->Teams->find('all')->where(['name' => $aux]);
+        }
+        elseif (isset($this->request->data['category_id']) && $this->request->data['category_id']!=""){
+            $aux = $this->request->data['category_id'];
+            $query = $this->Teams->find('all')->where(['category_id' => $aux]);
+        }
+        else {
+            $query = $this->Teams->find('all');
+        }
+        
+         $this->paginate = [
+             'maxLimit' => 10
+         ];
+        
+        $categoriesTable = $this->loadModel('Categories');
+        $categories_for_search = $categoriesTable->find();
         $categories = $this->loadModel('Categories');
         $distances = $this->loadModel('Distances');
         $ages = $this->loadModel('Ages');
 
         $this->set('categories', $categories);
+        $this->set('categoriesSearch', $categories_for_search);
         $this->set('distances', $distances);
         $this->set('ages', $ages);
-        $this->set('teams', $this->paginate($this->Teams));
+        $this->set('teams', $this->paginate($query));
         $this->set('_serialize', ['teams']);
     }
 
