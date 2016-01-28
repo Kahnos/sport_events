@@ -34,7 +34,7 @@ $this->start('tb_actions');
             <td>
                 <?= $categoriesEventsMode->has('event') ? $this->Html->link($categoriesEventsMode->event->name, ['controller' => 'Events', 'action' => 'view', $categoriesEventsMode->event->id]) : '' ?>
             </td>
-            <td><?= h($categoriesEventsMode->hour->format('H:m')) ?></td>
+            <td><?= h($categoriesEventsMode->hour->format('H:m:s')) ?></td>
             <td class="actions">
                 <?= $this->Html->link('', ['action' => 'view', $categoriesEventsMode->mode_id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
                 <?= $this->Html->link('', ['action' => 'edit', $categoriesEventsMode->mode_id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
