@@ -488,22 +488,22 @@ insert  into `times`(`time_1`,`time_2`,`time_3`,`time_4`,`id`,`individual_partic
 DROP TABLE IF EXISTS `winners`;
 
 CREATE TABLE `winners` (
-  `gold_id` int(10) unsigned DEFAULT NULL,
-  `silver_id` int(11) DEFAULT NULL,
-  `bronze_id` int(11) DEFAULT NULL,
-  `mode_id` int(10) unsigned DEFAULT NULL,
-  `category_id` int(10) unsigned DEFAULT NULL,
-  `event_id` int(10) unsigned DEFAULT NULL,
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`),
-  KEY `IX_Relationship40` (`mode_id`,`category_id`,`event_id`),
+  `gold_id` Int UNSIGNED,
+  `silver_id` Int,
+  `bronze_id` Int,
+  `mode_id` Int UNSIGNED NOT NULL,
+  `category_id` Int UNSIGNED NOT NULL,
+  `event_id` Int UNSIGNED NOT NULL
   CONSTRAINT `Relationship40` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
+ALTER TABLE `winners` ADD  PRIMARY KEY (`mode_id`,`category_id`,`event_id`)
+;
+
 /*Data for the table `winners` */
 
-insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`,`id`) values 
-(1,2,3,1,8,2,3);
+insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`) values 
+(1,2,3,1,8,2);
 
 /* Trigger structure for table `athletes_teams` */
 
