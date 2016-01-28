@@ -34,26 +34,6 @@ $this->start('tb_actions');
     echo $this->Form->input('clubs._ids', ['options' => $clubs]);
     echo $this->Form->input('category_id', ['options' => $catArray]);
     echo $this->Form->input('athletes._ids', ['options' => $athletes]);
-    echo 'LIB </br>';
-        
-    /*$options = array('M' => 'Male', 'F' => 'Female');
-    $attributes = array('legend' => false);
-    echo $this->Form->radio('gender', $options, $attributes);*/
-        
-    echo '<strong>Tipo de categoría </br></strong>';
-    
-    echo $this->Form->radio(
-    'category_type',
-    [
-        ['value' => 'S', 'text' => 'Sexo'],
-        ['value' => 'E', 'text' => 'Edad'],
-    ]
-    );
-    
-    if ($this->request['category_type']=='S'){
-        echo 'Libny';
-    }     
-        
     ?>
 </fieldset>
 <?= $this->Form->button(__("Add")); ?>
