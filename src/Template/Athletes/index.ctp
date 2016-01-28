@@ -12,6 +12,20 @@ $this->start('tb_actions');
 
 <h2>Atletas</h2>
 
+</br>
+</br>
+<?php
+    echo $this->Form->create($athletes);
+
+    echo $this->Form->input('CI', ['label' => 'Cédula de identidad:', 'required' => false]);
+
+    echo $this->Form->submit('Buscar');
+
+    $this->Form->end();
+?>
+</br>
+</br>
+
 <table class="table table-striped" cellpadding="0" cellspacing="0">
        <thead>
         <tr>

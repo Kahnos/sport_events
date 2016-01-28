@@ -18,8 +18,19 @@ class AthletesController extends AppController
      * @return void
      */
     public function index()
-    {
-        $this->set('athletes', $this->paginate($this->Athletes));
+    {   
+        if(isset($this->request->data['CI']) && $this->request->data['CI']!=""){
+            $aux = $this->request->data['CI'];
+            $query = $this->Athletes->find('all')->where(['CI' => $aux]);
+        }else {
+            $query = $this->Athletes->find('all');
+        }
+        
+         $this->paginate = [
+             'maxLimit' => 10
+         ];
+        
+        $this->set('athletes', $this->paginate($query));        
         $this->set('_serialize', ['athletes']);
     }
 
