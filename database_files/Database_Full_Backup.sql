@@ -30,7 +30,7 @@ CREATE TABLE `ages` (
 
 /*Data for the table `ages` */
 
-insert  into `ages`(`id`,`min_age`,`max_age`,`name`) values 
+insert  into `ages`(`id`,`min_age`,`max_age`,`name`) values
 (1,15,17,'Cadete'),
 (2,18,19,'Junior'),
 (3,20,23,'Sub 23'),
@@ -43,17 +43,23 @@ insert  into `ages`(`id`,`min_age`,`max_age`,`name`) values
 
 DROP TABLE IF EXISTS `athletes`;
 
-CREATE TABLE `athletes` (
-  `id` int(10) unsigned NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `sex` enum('F','M') NOT NULL,
-  `date_of_birth` date NOT NULL,
+CREATE TABLE `athletes`
+(
+  `id` Int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` Varchar(100) NOT NULL,
+  `sex` Enum('F','M') NOT NULL,
+  `date_of_birth` Date NOT NULL,
+  `CI` Int UNSIGNED NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `athletes` ADD UNIQUE `CI` (`CI`)
+;
 
 /*Data for the table `athletes` */
 
-insert  into `athletes`(`id`,`name`,`sex`,`date_of_birth`) values 
+insert  into `athletes`(`CI`,`name`,`sex`,`date_of_birth`) values
 (111111,'N','M','1965-02-02'),
 (6508327,'José','M','1965-08-23'),
 (8532691,'Engracia','F','1962-06-12'),
@@ -79,11 +85,11 @@ CREATE TABLE `athletes_teams` (
 
 /*Data for the table `athletes_teams` */
 
-insert  into `athletes_teams`(`athlete_id`,`team_id`) values 
-(24035930,1),
-(24411211,1),
-(111111,2),
-(6508327,2);
+insert  into `athletes_teams`(`athlete_id`,`team_id`) values
+(6,1),
+(7,1),
+(1,2),
+(2,2);
 
 /*Table structure for table `categories` */
 
@@ -103,7 +109,7 @@ CREATE TABLE `categories` (
 
 /*Data for the table `categories` */
 
-insert  into `categories`(`id`,`sex`,`age_id`,`distance_id`) values 
+insert  into `categories`(`id`,`sex`,`age_id`,`distance_id`) values
 (1,'F',NULL,1),
 (2,'F',NULL,2),
 (3,'F',NULL,3),
@@ -214,7 +220,7 @@ CREATE TABLE `categories_events_modes` (
 
 /*Data for the table `categories_events_modes` */
 
-insert  into `categories_events_modes`(`mode_id`,`category_id`,`event_id`,`hour`) values 
+insert  into `categories_events_modes`(`mode_id`,`category_id`,`event_id`,`hour`) values
 (1,8,1,'00:00:00'),
 (1,8,2,'00:12:02'),
 (7,6,2,'00:12:02'),
@@ -232,7 +238,7 @@ CREATE TABLE `clubs` (
 
 /*Data for the table `clubs` */
 
-insert  into `clubs`(`id`,`name`) values 
+insert  into `clubs`(`id`,`name`) values
 (1,'Club A'),
 (2,'Club B'),
 (3,'Club C'),
@@ -251,7 +257,7 @@ CREATE TABLE `disciplines` (
 
 /*Data for the table `disciplines` */
 
-insert  into `disciplines`(`id`,`type`,`sub_type`) values 
+insert  into `disciplines`(`id`,`type`,`sub_type`) values
 (1,'Atletismo','Caminata'),
 (2,'Atletismo','Carrera'),
 (3,'Ciclismo','Asfalto'),
@@ -275,7 +281,7 @@ CREATE TABLE `disciplines_modes` (
 
 /*Data for the table `disciplines_modes` */
 
-insert  into `disciplines_modes`(`discipline_id`,`mode_id`) values 
+insert  into `disciplines_modes`(`discipline_id`,`mode_id`) values
 (2,1),
 (3,1),
 (1,2),
@@ -319,7 +325,7 @@ CREATE TABLE `distances` (
 
 /*Data for the table `distances` */
 
-insert  into `distances`(`id`,`distance_1`,`distance_2`,`distance_3`,`distance_4`,`name`) values 
+insert  into `distances`(`id`,`distance_1`,`distance_2`,`distance_3`,`distance_4`,`name`) values
 (1,750,20000,5000,0,'Sprint Triatlón'),
 (2,1500,40000,10000,0,'Larga Triatlón'),
 (3,2500,10000,10000,50000,'Corta Tetratlón'),
@@ -344,7 +350,7 @@ CREATE TABLE `events` (
 
 /*Data for the table `events` */
 
-insert  into `events`(`id`,`name`,`date`) values 
+insert  into `events`(`id`,`name`,`date`) values
 (1,'Evento 1','2016-01-07'),
 (2,'Evento 2','2016-02-03'),
 (3,'Evento 3','2016-01-19'),
@@ -372,11 +378,11 @@ CREATE TABLE `individual_participations` (
 
 /*Data for the table `individual_participations` */
 
-insert  into `individual_participations`(`position`,`id`,`athlete_id`,`mode_id`,`category_id`,`event_id`) values 
-(2,1,24560595,1,8,2),
-(3,2,22824486,1,8,2),
-(1,3,26138934,1,8,2),
-(NULL,4,12345678,1,8,1);
+insert  into `individual_participations`(`position`,`id`,`athlete_id`,`mode_id`,`category_id`,`event_id`) values
+(2,1,8,1,8,2),
+(3,2,5,1,8,2),
+(1,3,9,1,8,2),
+(NULL,4,4,1,8,1);
 
 /*Table structure for table `modes` */
 
@@ -391,7 +397,7 @@ CREATE TABLE `modes` (
 
 /*Data for the table `modes` */
 
-insert  into `modes`(`id`,`type`,`number_of_disciplines`) values 
+insert  into `modes`(`id`,`type`,`number_of_disciplines`) values
 (1,'Duatlón',2),
 (2,'Triatlón',3),
 (3,'Tetratlón',4),
@@ -424,7 +430,7 @@ CREATE TABLE `team_participations` (
 
 /*Data for the table `team_participations` */
 
-insert  into `team_participations`(`position`,`id`,`team_id`,`mode_id`,`category_id`,`event_id`) values 
+insert  into `team_participations`(`position`,`id`,`team_id`,`mode_id`,`category_id`,`event_id`) values
 (NULL,1,1,7,13,1),
 (NULL,2,2,7,13,1),
 (NULL,6,2,7,6,2);
@@ -447,7 +453,7 @@ CREATE TABLE `teams` (
 
 /*Data for the table `teams` */
 
-insert  into `teams`(`id`,`name`,`club_id`,`category_id`) values 
+insert  into `teams`(`id`,`name`,`club_id`,`category_id`) values
 (1,'Equipo 1',2,13),
 (2,'Equipo 3',3,8),
 (3,'Equipo 2',1,13),
@@ -475,7 +481,7 @@ CREATE TABLE `times` (
 
 /*Data for the table `times` */
 
-insert  into `times`(`time_1`,`time_2`,`time_3`,`time_4`,`id`,`individual_participation_id`,`team_participation_id`,`time_total`) values 
+insert  into `times`(`time_1`,`time_2`,`time_3`,`time_4`,`id`,`individual_participation_id`,`team_participation_id`,`time_total`) values
 ('01:25:00.00','01:13:54.00',NULL,NULL,1,1,NULL,'02:38:54'),
 ('01:31:01.00','01:13:49.00',NULL,NULL,2,2,NULL,'02:44:50'),
 ('01:23:58.00','01:22:32.00',NULL,NULL,3,3,NULL,'02:20:00'),
@@ -493,7 +499,7 @@ CREATE TABLE `winners` (
   `bronze_id` Int,
   `mode_id` Int UNSIGNED NOT NULL,
   `category_id` Int UNSIGNED NOT NULL,
-  `event_id` Int UNSIGNED NOT NULL
+  `event_id` Int UNSIGNED NOT NULL,
   CONSTRAINT `Relationship40` FOREIGN KEY (`mode_id`, `category_id`, `event_id`) REFERENCES `categories_events_modes` (`mode_id`, `category_id`, `event_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -502,7 +508,7 @@ ALTER TABLE `winners` ADD  PRIMARY KEY (`mode_id`,`category_id`,`event_id`)
 
 /*Data for the table `winners` */
 
-insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`) values 
+insert  into `winners`(`gold_id`,`silver_id`,`bronze_id`,`mode_id`,`category_id`,`event_id`) values
 (1,2,3,1,8,2);
 
 /* Trigger structure for table `athletes_teams` */
@@ -512,63 +518,63 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_team_member` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_team_member` BEFORE INSERT ON `athletes_teams` FOR EACH ROW BEGIN
-    
-	DECLARE category_sex CHAR;
-	DECLARE sex CHAR;	
-	DECLARE min_age TINYINT;
-	DECLARE max_age TINYINT;
-	DECLARE athlete_age TINYINT;
-	DECLARE team_category INT;
-	
-	DECLARE ammount TINYINT DEFAULT 0;
-	
-	SELECT T.category_id INTO team_category 
-	FROM teams T
-	WHERE T.id = NEW.team_id;
-	
-	IF (team_category < 21) THEN
-	
-		SELECT C.sex INTO category_sex
-		FROM categories C, teams T
-		WHERE T.id = NEW.team_id AND
-		      C.id = T.category_id;
-		      
-		SELECT A.sex INTO sex
-		FROM athletes A
-		WHERE A.id = NEW.athlete_id;
-		
-		IF (sex != category_sex) THEN
-			SET NEW.athlete_id = NULL;
-			SET NEW.team_id = NULL;
-		END IF;
-	      
-	ELSE 
-	
-		SELECT A.min_age, A.max_age
-		INTO min_age, max_age
-		FROM ages A, categories C
-		WHERE T.id = NEW.team_id AND
-		      C.id = T.category_id AND
-		      A.id = C.age_id;
-		   
-		SELECT age(NEW.athlete_id) INTO athlete_age;
-		
-		IF ((athlete_age < min_age) OR (athlete_age > max_age)) THEN
-			SET NEW.athlete_id = NULL;
-			SET NEW.team_id = NULL;
-		END IF;
-	end if;	
-	
-	
-	SELECT COUNT(*) INTO ammount
-	FROM athletes_teams ATeams
-	WHERE ATeams.team_id = NEW.team_id
-	GROUP BY (ATeams.team_id);
-		
-	IF ( ammount >= 4) THEN
-		SET NEW.team_id = NULL;
-		SET NEW.athlete_id = NULL;
-	END IF;
+
+    DECLARE category_sex CHAR;
+    DECLARE sex CHAR;
+    DECLARE min_age TINYINT;
+    DECLARE max_age TINYINT;
+    DECLARE athlete_age TINYINT;
+    DECLARE team_category INT;
+
+    DECLARE ammount TINYINT DEFAULT 0;
+
+    SELECT T.category_id INTO team_category
+    FROM teams T
+    WHERE T.id = NEW.team_id;
+
+    IF (team_category < 21) THEN
+
+        SELECT C.sex INTO category_sex
+        FROM categories C, teams T
+        WHERE T.id = NEW.team_id AND
+              C.id = T.category_id;
+
+        SELECT A.sex INTO sex
+        FROM athletes A
+        WHERE A.id = NEW.athlete_id;
+
+        IF (sex != category_sex) THEN
+            SET NEW.athlete_id = NULL;
+            SET NEW.team_id = NULL;
+        END IF;
+
+    ELSE
+
+        SELECT A.min_age, A.max_age
+        INTO min_age, max_age
+        FROM ages A, categories C
+        WHERE T.id = NEW.team_id AND
+              C.id = T.category_id AND
+              A.id = C.age_id;
+
+        SELECT age(NEW.athlete_id) INTO athlete_age;
+
+        IF ((athlete_age < min_age) OR (athlete_age > max_age)) THEN
+            SET NEW.athlete_id = NULL;
+            SET NEW.team_id = NULL;
+        END IF;
+    end if;
+
+
+    SELECT COUNT(*) INTO ammount
+    FROM athletes_teams ATeams
+    WHERE ATeams.team_id = NEW.team_id
+    GROUP BY (ATeams.team_id);
+
+    IF ( ammount >= 4) THEN
+        SET NEW.team_id = NULL;
+        SET NEW.athlete_id = NULL;
+    END IF;
     END */$$
 
 
@@ -581,23 +587,23 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_insert_winners_row` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_insert_winners_row` AFTER INSERT ON `categories_events_modes` FOR EACH ROW BEGIN
-	INSERT INTO `proyecto_bd`.`winners` (
-	  `gold_id`,
-	  `silver_id`,
-	  `bronze_id`,
-	  `mode_id`,
-	  `category_id`,
-	  `event_id`
-	) 
-	VALUES
-	  (
-	    NULL,
-	    NULL,
-	    NULL,
-	    mode_id,
-	    category_id,
-	    event_id
-	  ) ;
+    INSERT INTO `proyecto_bd`.`winners` (
+      `gold_id`,
+      `silver_id`,
+      `bronze_id`,
+      `mode_id`,
+      `category_id`,
+      `event_id`
+    )
+    VALUES
+      (
+        NULL,
+        NULL,
+        NULL,
+        mode_id,
+        category_id,
+        event_id
+      ) ;
     END */$$
 
 
@@ -610,40 +616,40 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_athlete_participation_category` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_athlete_participation_category` BEFORE INSERT ON `individual_participations` FOR EACH ROW BEGIN
-	DECLARE category_sex CHAR;
-	DECLARE sex CHAR;	
-	DECLARE min_age TINYINT;
-	DECLARE max_age TINYINT;
-	DECLARE athlete_age TINYINT;
-	
-	IF (new.category_id < 21) THEN
-		SELECT C.sex INTO category_sex
-		FROM categories C
-		WHERE C.id = NEW.category_id;
-		
-		SELECT A.sex INTO sex
-		FROM athletes A
-		WHERE A.id = NEW.athlete_id;
-		
-		IF (sex != category_sex) THEN
-			SET NEW.id = NULL;
-		END IF;
-	      
-	ELSE 
-		
-		SELECT A.min_age, A.max_age
-		INTO min_age, max_age
-		FROM ages A, categories C
-		WHERE C.id = NEW.category_id AND
-		      A.id = C.age_id;
-		      
-		SELECT age(NEW.athlete_id) INTO athlete_age;
-		
-		IF ((athlete_age < min_age) OR (athlete_age > max_age)) THEN
-			SET NEW.id = NULL;
-		END IF;
-		
-	END IF;
+    DECLARE category_sex CHAR;
+    DECLARE sex CHAR;
+    DECLARE min_age TINYINT;
+    DECLARE max_age TINYINT;
+    DECLARE athlete_age TINYINT;
+
+    IF (new.category_id < 21) THEN
+        SELECT C.sex INTO category_sex
+        FROM categories C
+        WHERE C.id = NEW.category_id;
+
+        SELECT A.sex INTO sex
+        FROM athletes A
+        WHERE A.id = NEW.athlete_id;
+
+        IF (sex != category_sex) THEN
+            SET NEW.id = NULL;
+        END IF;
+
+    ELSE
+
+        SELECT A.min_age, A.max_age
+        INTO min_age, max_age
+        FROM ages A, categories C
+        WHERE C.id = NEW.category_id AND
+              A.id = C.age_id;
+
+        SELECT age(NEW.athlete_id) INTO athlete_age;
+
+        IF ((athlete_age < min_age) OR (athlete_age > max_age)) THEN
+            SET NEW.id = NULL;
+        END IF;
+
+    END IF;
     END */$$
 
 
@@ -656,40 +662,40 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_individual_participation_update` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_individual_participation_update` AFTER UPDATE ON `individual_participations` FOR EACH ROW BEGIN
-    
-	IF ( OLD.position = NULL) THEN
-		IF ( NEW.position = 1 ) THEN
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `gold_id` = NEW.athlete_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-			  
-		ELSEIF ( NEW.position = 2 ) THEN
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `silver_id` = NEW.athlete_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-			  
-		ELSEIF ( NEW.position = 3 ) THEN 
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `bronze_id` = NEW.athlete_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-		END IF;
-	END IF;
-	
+
+    IF ( OLD.position = NULL) THEN
+        IF ( NEW.position = 1 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `gold_id` = NEW.athlete_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+
+        ELSEIF ( NEW.position = 2 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `silver_id` = NEW.athlete_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+
+        ELSEIF ( NEW.position = 3 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `bronze_id` = NEW.athlete_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+        END IF;
+    END IF;
+
     END */$$
 
 
@@ -702,15 +708,15 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_team_participation_category` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_team_participation_category` BEFORE INSERT ON `team_participations` FOR EACH ROW BEGIN
-	DECLARE team_cat SMALLINT;
-	
-	SELECT T.category_id INTO team_cat 
-	FROM teams T
-	WHERE T.id = NEW.team_id;
-	
-	IF (team_cat != NEW.team_id) THEN
-		SET NEW.id = NULL;
-	END IF;
+    DECLARE team_cat SMALLINT;
+
+    SELECT T.category_id INTO team_cat
+    FROM teams T
+    WHERE T.id = NEW.team_id;
+
+    IF (team_cat != NEW.team_id) THEN
+        SET NEW.id = NULL;
+    END IF;
     END */$$
 
 
@@ -723,41 +729,41 @@ DELIMITER $$
 /*!50003 DROP TRIGGER*//*!50032 IF EXISTS */ /*!50003 `trigger_team_participation_after_update` */$$
 
 /*!50003 CREATE */ /*!50017 DEFINER = 'root'@'localhost' */ /*!50003 TRIGGER `trigger_team_participation_after_update` AFTER UPDATE ON `team_participations` FOR EACH ROW BEGIN
-    
-	IF ( OLD.position = NULL) THEN
-		IF ( NEW.position = 1 ) THEN
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `gold_id` = NEW.team_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-			  
-		ELSEIF ( NEW.position = 2 ) THEN
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `silver_id` = NEW.team_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-			  
-		ELSEIF ( NEW.position = 3 ) THEN 
-		
-			UPDATE 
-			  `proyecto_bd`.`winners` 
-			SET
-			  `bronze_id` = NEW.team_id
-			WHERE `mode_id` = NEW.mode_id
-			  AND `category_id` = NEW.category_id
-			  AND `event_id` = NEW.event_id ;
-			  
-		END IF;
-	END IF;
-	
+
+    IF ( OLD.position = NULL) THEN
+        IF ( NEW.position = 1 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `gold_id` = NEW.team_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+
+        ELSEIF ( NEW.position = 2 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `silver_id` = NEW.team_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+
+        ELSEIF ( NEW.position = 3 ) THEN
+
+            UPDATE
+              `proyecto_bd`.`winners`
+            SET
+              `bronze_id` = NEW.team_id
+            WHERE `mode_id` = NEW.mode_id
+              AND `category_id` = NEW.category_id
+              AND `event_id` = NEW.event_id ;
+
+        END IF;
+    END IF;
+
     END */$$
 
 
@@ -770,16 +776,16 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `age`(id INT) RETURNS tinyint(4)
 BEGIN
-	
-	DECLARE age TINYINT;
-	DECLARE birthdate DATE;
-	
-	SELECT TRUNCATE( (DATEDIFF( CURDATE(), A.date_of_birth ) / 365) , 0) INTO age
-	FROM athletes A 
-	WHERE A.id = id;
-	
-	RETURN age;
-	
+
+    DECLARE age TINYINT;
+    DECLARE birthdate DATE;
+
+    SELECT TRUNCATE( (DATEDIFF( CURDATE(), A.date_of_birth ) / 365) , 0) INTO age
+    FROM athletes A
+    WHERE A.id = id;
+
+    RETURN age;
+
     END */$$
 DELIMITER ;
 
@@ -790,35 +796,35 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `best_time`(mode_id INT, event_id INT) RETURNS int(11)
 BEGIN
-	DECLARE btime_id INT;
-			
-	IF ((mode_id > 0) && (mode_id < 6)) THEN
-		SELECT I.athlete_id INTO btime_id
-		FROM individual_participations I, times T
-		WHERE I.id = T.individual_participation_id AND
-		      I.event_id = event_id AND
-		      T.individual_participation_id IS NOT NULL AND
-		      T.time_total IN (SELECT MIN(T.time_total)
-				       FROM individual_participations I, times T
-				       WHERE I.id = T.individual_participation_id AND
-					     I.event_id = event_id AND
-					     T.individual_participation_id IS NOT NULL);
-					   
-	ELSEIF ((mode_id > 5) && (mode_id < 11)) THEN
-		SELECT Te.team_id INTO btime_id
-		FROM team_participations Te, times T
-		WHERE Te.id = T.team_participation_id AND
-		      Te.event_id = event_id AND
-		      T.team_participation_id IS NOT NULL AND
-		      T.time_total IN (SELECT MIN(T.time_total)
-				       FROM team_participations Te, times T
-				       WHERE Te.id = T.team_participation_id AND
-					     Te.event_id = event_id AND
-					     T.team_participation_id IS NOT NULL);
-	END IF;
-	
-	RETURN btime_id;
-	
+    DECLARE btime_id INT;
+
+    IF ((mode_id > 0) && (mode_id < 6)) THEN
+        SELECT I.athlete_id INTO btime_id
+        FROM individual_participations I, times T
+        WHERE I.id = T.individual_participation_id AND
+              I.event_id = event_id AND
+              T.individual_participation_id IS NOT NULL AND
+              T.time_total IN (SELECT MIN(T.time_total)
+                       FROM individual_participations I, times T
+                       WHERE I.id = T.individual_participation_id AND
+                         I.event_id = event_id AND
+                         T.individual_participation_id IS NOT NULL);
+
+    ELSEIF ((mode_id > 5) && (mode_id < 11)) THEN
+        SELECT Te.team_id INTO btime_id
+        FROM team_participations Te, times T
+        WHERE Te.id = T.team_participation_id AND
+              Te.event_id = event_id AND
+              T.team_participation_id IS NOT NULL AND
+              T.time_total IN (SELECT MIN(T.time_total)
+                       FROM team_participations Te, times T
+                       WHERE Te.id = T.team_participation_id AND
+                         Te.event_id = event_id AND
+                         T.team_participation_id IS NOT NULL);
+    END IF;
+
+    RETURN btime_id;
+
     END */$$
 DELIMITER ;
 
@@ -830,67 +836,67 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `assign_position`(mode_id INT, cat_id INT, event_id INT)
 BEGIN
-	
-	DECLARE done INT DEFAULT FALSE;
-	DECLARE id INT;
-	DECLARE i INT DEFAULT 1;
-	
-	DECLARE curI CURSOR FOR SELECT T.individual_participation_id
-		FROM times T, individual_participations IP
-		WHERE T.individual_participation_id = IP.id AND 
-		      IP.mode_id = mode_id AND
-		      IP.category_id = cat_id AND
-		      IP.event_id = event_id
-		ORDER BY T.time_total asc;
-		
-	DECLARE curT CURSOR FOR SELECT T.team_participation_id
-		FROM times T, team_participations TP
-		WHERE T.team_id = TP.id AND 
-		      TP.mode_id = mode_id AND
-		      TP.category_id = cat_id AND
-		      TP.event_id = event_id
-		ORDER BY T.time_total asc;
-		
-	DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; 
-	IF ( (mode_id > 0) && (mode_id < 6) ) THEN 
-		
-		OPEN curI;
-		read_loop: LOOP
-		
-		FETCH curI INTO id;
-		IF done THEN
-			LEAVE read_loop;	
-		END IF;
-		
-		UPDATE individual_participations IP
-		SET IP.position = i
-		WHERE IP.id = id;		
-		
-		SET i = i + 1;
-		
-		END LOOP;
-		CLOSE curI;
-		
-	ELSEIF ( (mode_id > 5) && (mode_id < 11) ) THEN
-	
-		OPEN curT; 
-		read_loop_team: LOOP
-		
-		FETCH curT INTO id;
-		IF done THEN
-			LEAVE read_loop_team;	
-		END IF;
-		
-		UPDATE team_participations TP
-		SET TP.position = i
-		WHERE TP.id = id;		
-		
-		SET i = i + 1;
-		
-		END LOOP;
-		CLOSE curT;
-		
-	END IF;
+
+    DECLARE done INT DEFAULT FALSE;
+    DECLARE id INT;
+    DECLARE i INT DEFAULT 1;
+
+    DECLARE curI CURSOR FOR SELECT T.individual_participation_id
+        FROM times T, individual_participations IP
+        WHERE T.individual_participation_id = IP.id AND
+              IP.mode_id = mode_id AND
+              IP.category_id = cat_id AND
+              IP.event_id = event_id
+        ORDER BY T.time_total asc;
+
+    DECLARE curT CURSOR FOR SELECT T.team_participation_id
+        FROM times T, team_participations TP
+        WHERE T.team_id = TP.id AND
+              TP.mode_id = mode_id AND
+              TP.category_id = cat_id AND
+              TP.event_id = event_id
+        ORDER BY T.time_total asc;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+    IF ( (mode_id > 0) && (mode_id < 6) ) THEN
+
+        OPEN curI;
+        read_loop: LOOP
+
+        FETCH curI INTO id;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+
+        UPDATE individual_participations IP
+        SET IP.position = i
+        WHERE IP.id = id;
+
+        SET i = i + 1;
+
+        END LOOP;
+        CLOSE curI;
+
+    ELSEIF ( (mode_id > 5) && (mode_id < 11) ) THEN
+
+        OPEN curT;
+        read_loop_team: LOOP
+
+        FETCH curT INTO id;
+        IF done THEN
+            LEAVE read_loop_team;
+        END IF;
+
+        UPDATE team_participations TP
+        SET TP.position = i
+        WHERE TP.id = id;
+
+        SET i = i + 1;
+
+        END LOOP;
+        CLOSE curT;
+
+    END IF;
     END */$$
 DELIMITER ;
 
@@ -902,41 +908,41 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `test_fill`()
 BEGIN
-	DECLARE i INT DEFAULT 1;
-	DECLARE j INT DEFAULT 1;
-	DECLARE k INT DEFAULT 1;
-	
-	WHILE ( i < 11) DO
-	
-		WHILE ( j < 91) DO
-		
-			WHILE ( k < 5) DO
-			
-				INSERT INTO `proyecto_bd`.`categories_events_modes` (
-				  `mode_id`,
-				  `category_id`,
-				  `event_id`,
-				  `hour`
-				) 
-				VALUES
-				  (
-				    i,
-				    j,
-				    k,
-				    1200 + k
-				  ) ;
-				
-				SET k = k + 1;
-			END WHILE;
-			
-			set k = 1;
-			SET j = j + 1;
-		END WHILE;
-		
-		set j = 1;
-		SET i = i + 1;
-	END WHILE;
-	
+    DECLARE i INT DEFAULT 1;
+    DECLARE j INT DEFAULT 1;
+    DECLARE k INT DEFAULT 1;
+
+    WHILE ( i < 11) DO
+
+        WHILE ( j < 91) DO
+
+            WHILE ( k < 5) DO
+
+                INSERT INTO `proyecto_bd`.`categories_events_modes` (
+                  `mode_id`,
+                  `category_id`,
+                  `event_id`,
+                  `hour`
+                )
+                VALUES
+                  (
+                    i,
+                    j,
+                    k,
+                    1200 + k
+                  ) ;
+
+                SET k = k + 1;
+            END WHILE;
+
+            set k = 1;
+            SET j = j + 1;
+        END WHILE;
+
+        set j = 1;
+        SET i = i + 1;
+    END WHILE;
+
     END */$$
 DELIMITER ;
 
